@@ -1,0 +1,89 @@
+Deputados Analyt
+
+1. Papeis
+    Mentor: Pedro Markun, Ricardo Poppi ou Dani
+    Coordenador: Marcell    
+    Desenvol. Marcelio 
+    Produto: Leonardo
+    Luiz
+
+2. Tarefas
+    1. Mandar um mail p/ lista THack explicando o projeto Deputados Analytics e seu estado atual
+    2. Cadastrar um perfil thackpa e o projeto no site Thack
+    3. infra (dominio e hospedagem) - neutro (PHP, MySQL, cronjob, etc.)
+    4. ver framework (marcell)
+    5. github (marcelioleal)
+    5. fases
+        5.1. extracao (Luiz, Rafael, Aldrin[n conf])
+            - definir framework
+                - aldrin
+                - regex
+            - extrair deputados
+            - extrair prenseca i (por dia)
+            - extrair prenseca ii (por secao)
+            - extrair propostas/projetos (autor)
+            - extrair relatorias
+            - extrair votações
+            - extrair faltas
+            - extrair discursos
+            - extrair presença comissões (reuniões comissões)
+        5.2 processamento (Marcelio, Marcell)
+            - pensar nas métricas ou estatísticas
+                - modelo dados
+                    - por deputado
+                    - por partido
+                    - por estado
+                    - por região
+                - raking
+                    - projetar
+        5.3 apresentação (leonardo, luciano)
+            - framework gráfico - definir qual o framework que iremos utilizar para geração dos graficos
+            - menu topo e informações -
+            - programacao (processamento)
+
+    6. Video p/ o catarse
+    
+3. Bolsa
+    200 x 10
+    - 200 infra
+    - 200 cerveja
+    - 200 x 8 (4 dep, 2 lu, (aldrin,bruno,kamila ou claudio) ) 
+
+4. Outras definições
+
+
+
+Definicoes
+- 30 (anual) + 30 (anual)
+- Assinar um ano (27 dólares) 50 reais
+- 
+
+
+
+
+
+Deputados analytcs
+
+http://thackdaypa.titanpad.com/1
+
+-------------------------
+
+
+Acabei de aprender algo muito doido! Descobri como fazer Scraping usando apenas o Google Spreadsheet! É bem simples e permite publicar os dados para o mundo em CSV, TXT, ATOM, RSS, ODS, além de formatos proprietários. A exemplo, fiz um scraping do ranking de reclamações de serviços bancários. No link abaixo está apenas a tabela de reclamações de Débitos Não Autorizados:
+
+https://spreadsheets.google.com/pub?key=0AjrfliVYF6kPdE5yMFBmNmhuNUhQVGZaWmxJLWtJTXc&hl=en&output=csv
+
+Eis breve how-to, posso detalhar mais no blog se preferirem:
+
+1. Escolha o site a escrapear, de preferencia com tabelas em HTML como o http://www.transportes.gov.br/bit/br/BRs.htm
+2. Abra nova planilha no docs e insira esta fórmula =importHtml("url","query",index)
+3. Informe a URL a coletar os dados, em query informe o elemento desejado (table) e em index a ordem que o elemento aparece (se tiverem duas tabelas e quiser a segunda informe 1 pois a contagem inicia em 0)
+4. Veja a mágica acontecer e publique os dados pra galera!
+
+Bom final de semana minha gente! Postem os resultados do que conseguirem aqui ou em nosso forum tambem.
+
+
+--------------------
+YQL
+
+--------------------
