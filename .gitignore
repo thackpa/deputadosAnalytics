@@ -2,3 +2,9 @@
 .project
 .settings/
 build/
+vendor/symfony/
+vendor/bin/
+vendor/doctrine/
+vendor/.composer/
+nbproject/
+
