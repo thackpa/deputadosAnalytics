@@ -3,10 +3,7 @@ defined('APPLICATION_PATH') || define('APPLICATION_PATH', __DIR__);
 
 require_once __DIR__ . '/../vendor/silex.phar';
 require_once __DIR__ . '/../vendor/goutte.phar';
-$vendor = require_once __DIR__.'/../vendor/.composer/autoload_namespaces.php';
-
-print "aqui array";
-print_r($vendor);
+$vendor = require __DIR__.'/../vendor/.composer/autoload_namespaces.php';
 
 $configFile = APPLICATION_PATH."/../config/config.ini";
 
