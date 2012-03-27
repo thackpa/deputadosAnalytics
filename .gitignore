@@ -1,6 +1,7 @@
 .buildpath
 .project
 .settings/
+composer.lock
 build/
 vendor/symfony/
 vendor/bin/
