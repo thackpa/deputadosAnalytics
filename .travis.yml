@@ -3,7 +3,7 @@ php:
   - 5.3
   - 5.4
 
-script: phpunit phpunit --configuration phpunit.xml --coverage-text
+script: phpunit phpunit --configuration=phpunit.xml --coverage-text
 
 before_script:
   - "wget http://getcomposer.org/composer.phar"
