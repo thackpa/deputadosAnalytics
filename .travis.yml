@@ -6,7 +6,7 @@ php:
 env:
   APPLICATION_ENV=automatedtests
 
-script: phpunit --configuration phpunit.xml --coverage-text
+script: phpunit --configuration=phpunit.xml --coverage-html=reports/coverage
 
 before_script:
   - "wget http://getcomposer.org/composer.phar"
