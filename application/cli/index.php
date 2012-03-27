@@ -1,9 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-//defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'dev'));
+defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'dev'));
 
-define('APPLICATION_ENV','dev');
+//define('APPLICATION_ENV','dev');
 
 $app = require __DIR__ . '/../bootstrap.php';
 
