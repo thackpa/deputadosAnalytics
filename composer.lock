@@ -1,0 +1,23 @@
+{
+    "hash": "8e22bc265136407cbb470d12cdf7475c",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.2.1"
+        },
+        {
+            "package": "doctrine/dbal",
+            "version": "2.2.1"
+        },
+        {
+            "package": "doctrine/migrations",
+            "version": "dev-master",
+            "source-reference": "9e81984b0f126b0830d9ac6acc2d1da81aba2b94"
+        },
+        {
+            "package": "symfony/console",
+            "version": "2.0.7"
+        }
+    ],
+    "aliases": []
+}

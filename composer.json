@@ -1,0 +1,7 @@
+{
+    "require": {
+        "symfony/console" : "2.0.7",
+        "doctrine/dbal" : "2.2.*",
+        "doctrine/migrations" : "dev-master"
+    }
+}
