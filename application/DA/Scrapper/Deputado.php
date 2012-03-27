@@ -14,14 +14,16 @@ class Deputado extends Scrapper
     
     public function getAll()
     {
-        $crawler = $this->client->request('GET', $this->app['config']['url.deputados']);
+        $deputados = array();
+        $crawler = $this->request($this->app['config']['url.deputados']);
         $nodes = $crawler->filter('option');
         foreach($nodes as $node){
-            print($node->nodeValue."\n");
-            print($node->getAttribute('value')."\n\n");
+            $dados = explode("!", $node->getAttribute('value'));
+            
+            if(count($dados) == 2)
+                $deputados[] = array($dados[1],$dados[0]);
         }
+        return $deputados;
     }
-    
-    
     
 }
