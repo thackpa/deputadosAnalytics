@@ -9,5 +9,6 @@ env:
 script: phpunit --configuration phpunit.xml --coverage-text
 
 before_script:
+  - "php -m"
   - "wget http://getcomposer.org/composer.phar"
   - "php composer.phar update"
