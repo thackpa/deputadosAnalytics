@@ -18,6 +18,9 @@
     <filter>
         <whitelist>
             <directory suffix=".php">./application/</directory>
+            <exclude>
+                <directory suffix=".php">./application/cli/</directory>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>
