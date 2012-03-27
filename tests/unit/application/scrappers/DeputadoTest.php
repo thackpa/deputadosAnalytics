@@ -11,6 +11,7 @@ class DeputadoTest extends PHPUnit_Framework_TestCase
         parent::setUp();        
         $app = DA\Util\Registry::get("app");
         $this->scrapper = new Deputado($app);
+        print_r($app);
     }
     
     protected function tearDown() {
@@ -19,7 +20,7 @@ class DeputadoTest extends PHPUnit_Framework_TestCase
     
     public function testGetAll()
     {
-        $this->scrapper->getAll();
+        //$this->scrapper->getAll();
     }
     
 }
