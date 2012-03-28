@@ -1,4 +1,4 @@
-Deputados Analytics
+Deputados Analytics [![Build Status](https://secure.travis-ci.org/thackpa/deputadosAnalytics.png?branch=master)](http://travis-ci.org/thackpa/deputadosAnalytics)
 ===================
 
 Informações
