@@ -8,6 +8,7 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
 {
     
     private $scrapper;
+    private $app;
     
     protected function setUp() {
         parent::setUp();        

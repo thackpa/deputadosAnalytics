@@ -12,6 +12,7 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
      */
     
     private $builder;
+    private $app;
     
     protected function setUp() {
         parent::setUp();        
@@ -53,10 +54,7 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         $this->builder->atualizarDeputados($listaDep);
     }
     
-    public function testGetDeputadosAtuais()
-    {
-        $this->builder->getDeputadosAtuais();
-    }
+
     */
 
 }
