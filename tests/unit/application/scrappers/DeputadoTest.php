@@ -31,9 +31,11 @@ class DeputadoTest extends PHPUnit_Framework_TestCase
         $this->scrapper->expects($this->once())->method('request')->with($this->app['config']['url.deputados'])->will($this->returnValue($crawler));
         $deputados = $this->scrapper->getAll();
         
+        $this->assertTrue(is_array($deputados[0]));
+        $this->assertTrue(is_numeric($deputados[0][0]));
+        $this->assertTrue(is_string($deputados[0][1]));
         $this->assertEquals(513,count($deputados));
-        $this->assertTrue(array_key_exists(73930, $deputados));
-        $this->assertEquals(74354,array_search(strtoupper("ZENALDO COUTINHO"), $deputados));
+        $this->assertEquals(509,array_search(array(74354,strtoupper("ZENALDO COUTINHO")), $deputados));
     }
     
 }
