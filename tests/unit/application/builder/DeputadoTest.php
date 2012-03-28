@@ -17,14 +17,31 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         parent::setUp();        
         $this->app = Registry::get("app");
         
-        $this->builder = $this->getMockBuilder('DA\Builder\DeputadoData')->setConstructorArgs(array($this->app))->getMock(); 
+        $this->builder = new DeputadoData($this->app);
+        //$this->builder = $this->getMockBuilder('DA\Builder\DeputadoData')->setConstructorArgs(array($this->app))->getMock(); 
     }
     
     protected function tearDown() {
         parent::tearDown();
     }
     
+
+    public function testDepToListaMatriculas()
+    {
+        $deputados = array(
+            array("matricula" => 12344, "nome" => "Jaca Rato"),
+            array("matricula" => 12345, "nome" => "Jaca Rato"),
+            array("matricula" => 12346, "nome" => "Jaca Rato"),
+            array("matricula" => 12347, "nome" => "Jaca Rato"),
+            array("matricula" => 12348, "nome" => "Ratao")
+        );
+        
+        $listaMatriculas = array(12344,12345,12346,12347,12348);
+
+        $this->assertEquals($listaMatriculas,$this->builder->depToListaMatriculas($deputados));
+    }
     
+    /*
     public function testAtualizarListaDeputados()
     {
         $this->builder->atualizarListaDeputados();
@@ -40,10 +57,6 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
     {
         $this->builder->getDeputadosAtuais();
     }
-    
-    public function testDepToListaMatriculas()
-    {
-        $this->builder->depToListaMatriculas($deputados);
-    }
-    
+    */
+
 }

@@ -24,7 +24,7 @@ class DeputadoData extends Builder
     {
         $deputadosAtuais = $this->getDeputadosAtuais();
         $matriculasAtuais = $this->depToListaMatriculas($deputadosAtuais);
-        array_walk($listaDep, function ($value,$key) use ($matriculasNovas) { 
+        array_walk($listaDep, function ($value,$key) use (&$matriculasNovas) { 
                                             $matriculasNovas[] = $value[0];});
         print_r($matriculasNovas);
     }
@@ -41,8 +41,9 @@ class DeputadoData extends Builder
     
     public function depToListaMatriculas(Array $deputados)
     {
-        array_walk($deputados,function ($deputado) use($matriculas){
-                                        $matriculas = $deputado['matricula'];});
+        array_walk($deputados,function ($deputado) use(&$matriculas){
+                                        $matriculas[] = $deputado['matricula'];});
+                                        
         return $matriculas;
     }
     
