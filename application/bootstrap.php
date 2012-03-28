@@ -1,16 +1,17 @@
 <?php
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', __DIR__);
 
-require_once __DIR__ . '/../vendor/silex.phar';
+require __DIR__.'/../vendor/.composer/autoload.php';
 require_once __DIR__ . '/../vendor/goutte.phar';
 $vendor = require __DIR__.'/../vendor/.composer/autoload_namespaces.php';
 
 $configFile = APPLICATION_PATH."/../config/config.ini";
 
+
 $app = new Silex\Application();
-$app[ 'autoloader' ]->registerNamespaces($vendor);
 $app[ 'autoloader' ]->registerNamespace('DA', APPLICATION_PATH);
 $app[ 'autoloader' ]->register();
+
 
 $config = parse_ini_file($configFile,true);
 $config2 = array();

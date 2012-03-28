@@ -1,15 +1,17 @@
 <?php
 
-use DA\Scrapper\Deputado;
+namespace DA\Tests\Scrapper;
 
-class DeputadoTest extends PHPUnit_Framework_TestCase
+use DA\Scrapper\Deputado, DA\Util\Registry, Symfony\Component\DomCrawler\Crawler;
+
+class DeputadoTest extends \PHPUnit_Framework_TestCase
 {
     
     private $scrapper;
     
     protected function setUp() {
         parent::setUp();        
-        $this->app = DA\Util\Registry::get("app");
+        $this->app = Registry::get("app");
         
         $this->scrapper = $this->getMockBuilder('DA\Scrapper\Deputado')->setConstructorArgs(array($this->app))->setMethods(array('request'))->getMock(); 
     }
@@ -21,12 +23,8 @@ class DeputadoTest extends PHPUnit_Framework_TestCase
     public function testGetAll()
     {
         $content = file_get_contents(__DIR__.'/../../../data/'.$this->app['config']['url.deputados']);
-        $crawler = new Symfony\Component\DomCrawler\Crawler(null, $this->app['config']['url.deputados']);
+        $crawler = new Crawler(null, $this->app['config']['url.deputados']);
         $crawler->addContent($content);
-
-//        $client = $this->getMockBuilder('Symfony\Component\BrowserKit\Client')->getMockForAbstractClass();
-//        $client->expects($this->once())->method('request')->will($this->returnValue($crawler));
-	//$this->scrapper->expects($this->once())->method('getClient')->will($this->returnValue($client));
         
         $this->scrapper->expects($this->once())->method('request')->with($this->app['config']['url.deputados'])->will($this->returnValue($crawler));
         $deputados = $this->scrapper->getAll();
