@@ -22,7 +22,9 @@ class DeputadoData extends Builder
     
     public function atualizarDeputados(Array $listaDep)
     {
-        $deputadosAtuais = $this->getDeputadosAtuais();
+        $deputadosScrapper = new \DA\Repository\Deputado($this->app);
+        $deputadosAtuais = $deputadosScrapper->getDeputadosAtuais();
+        
         $matriculasAtuais = $this->depToListaMatriculas($deputadosAtuais);
         array_walk($listaDep, function ($value,$key) use (&$matriculasNovas) { $matriculasNovas[] = $value[0];});
         print_r($matriculasNovas);
