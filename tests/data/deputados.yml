@@ -1,0 +1,13 @@
+deputado:
+  -
+    id: 1
+    matricula: "1234"
+    nome: "Sérgio Malandro"
+  -
+    id: 2
+    matricula: "1235"
+    nome: "Chico Anísio"
+  -
+    id: 3
+    matricula: "1236"
+    nome: "Millor"

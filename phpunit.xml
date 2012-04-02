@@ -10,10 +10,10 @@
          syntaxCheck="false"
          verbose="false"
          >
-
-<testsuite name='Deputados Suite'>
-    <directory suffix='.php'>./tests/unit/</directory>
-</testsuite>
+             
+    <testsuite name='Deputados Suite'>
+        <directory suffix='.php'>./tests/unit/</directory>
+    </testsuite>
 
     <filter>
         <whitelist>
@@ -23,4 +23,5 @@
             </exclude>
         </whitelist>
     </filter>
+    
 </phpunit>

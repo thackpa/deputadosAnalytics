@@ -4,6 +4,9 @@ defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV
 
 $app = require __DIR__ . '/../application/bootstrap.php';
 
+$app[ 'autoloader' ]->registerNamespace('Base', APPLICATION_PATH.'/../tests/');
+$app[ 'autoloader' ]->register();
+
 DA\Util\Registry::set("app", $app);
 
 //Criar o banco
@@ -20,6 +23,5 @@ $connectionParams = array(
 $conn = Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
 
 $sql = file_get_contents(__DIR__."/../config/database/banco.sql");
-
 
 $stmt = $conn->query($sql);

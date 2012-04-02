@@ -4,19 +4,26 @@ namespace DA\Tests\Repository;
 
 use DA\Repository\Deputado, DA\Util\Registry;
 
-class DeputadoTest extends \PHPUnit_Framework_TestCase
+class DeputadoTest extends \Base\DB
 {
     
     private $repository;
-    private $app;
+    protected $app;
     
     protected function setUp() {
-        parent::setUp();        
         $this->app = Registry::get("app");
         $this->repository = new Deputado($this->app);
-        //$this->repository = $this->getMockBuilder('DA\Repository\Deputado')->setConstructorArgs(array($this->app))->getMock(); 
+        parent::setUp();        
     }
     
+    protected function getDataSet()
+    {
+        return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(
+            dirname(__FILE__)."/../../../data/deputados.yml"
+        );        
+    }
+
+
     protected function tearDown() {
         parent::tearDown();
     }
