@@ -19,9 +19,11 @@ class Deputado extends Scrapper
      */
     public function getAll()
     {
-        die('nao pode entrar aqui');
         $deputados = array();
+        
         $crawler = $this->request($this->app['config']['url.deputados']);
+        
+        
         $nodes = $crawler->filter('option');
         foreach($nodes as $node){
             $dados = explode('!', $node->getAttribute('value'));
