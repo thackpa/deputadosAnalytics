@@ -2,59 +2,86 @@
 
 namespace DA\Tests\Builder;
 
-use DA\Builder\DeputadoData, DA\Util\Registry;
+use DA\Util\Registry;
 
 class DeputadoTest extends \PHPUnit_Framework_TestCase
 {
+    
+    private $app;
+    
     /**
      *
      * @var DA\Builder\Deputado
      */
-    
     private $builder;
-    private $app;
+    
+    /**
+     * @var \PHPUnit_Framework_MockObject_MockObject 
+     */
+    private $scrapperMock;
+    
+    /**
+     * @var \PHPUnit_Framework_MockObject_MockObject 
+     */
+    private $repoMock;
     
     protected function setUp() {
         parent::setUp();        
-        $this->app = Registry::get("app");
+        $this->app      = Registry::get("app");
         
-        $this->builder = new DeputadoData($this->app);
-        //$this->builder = $this->getMockBuilder('DA\Builder\DeputadoData')->setConstructorArgs(array($this->app))->getMock(); 
+        $this->scrapperMock = $this->getMockBuilder('DA\Scrapper\Deputado')
+                                ->setConstructorArgs(array($this->app))
+                                ->getMock(); 
+        
+        $this->repoMock = $this->getMockBuilder('DA\Repository\Deputado')
+                                ->setConstructorArgs(array($this->app))
+                                ->getMock(); 
+        
+        $this->builder = new \DA\Builder\Deputado($this->app,$this->scrapperMock,$this->repoMock);
+        
+        //$this->setProtectedAtributes('');
     }
     
     protected function tearDown() {
         parent::tearDown();
     }
     
-
-    public function testDepToListaMatriculas()
-    {
-        $deputados = array(
-            array("matricula" => 12344, "nome" => "Jaca Rato"),
-            array("matricula" => 12345, "nome" => "Jaca Rato"),
-            array("matricula" => 12346, "nome" => "Jaca Rato"),
-            array("matricula" => 12347, "nome" => "Jaca Rato"),
-            array("matricula" => 12348, "nome" => "Ratao")
-        );
-        
-        $listaMatriculas = array(12344,12345,12346,12347,12348);
-
-        $this->assertEquals($listaMatriculas,$this->builder->depToListaMatriculas($deputados));
-    }
-    
-    /*
     public function testAtualizarListaDeputados()
     {
+        $deputadosOnline = array(
+            array('matricula' => 1, 'nome' => strtoupper('Jaca Rato')),
+            array('matricula' => 2, 'nome' => strtoupper('Jaca Paladium')),
+            array('matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan')),
+            array('matricula' => 4, 'nome' => strtoupper('Jim')),
+            array('matricula' => 5, 'nome' => strtoupper('Stifler')),
+            array('matricula' => 6, 'nome' => strtoupper('Finch')),
+            array('matricula' => 7, 'nome' => strtoupper('Reginaldo Rossi')),
+            array('matricula' => 8, 'nome' => strtoupper('Chimbinha'))
+        );
+        
+        $this->scrapperMock->expects($this->once())->method('getAll')->will($this->returnValue($deputadosOnline));
+        
+        $deputadosBD = array(
+            array('matricula' => 1, 'nome' => strtoupper('Jaca Rato')),
+            array('matricula' => 2, 'nome' => strtoupper('Jaca Paladium')),
+            array('matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan')),
+            array('matricula' => 4, 'nome' => strtoupper('Jim')),
+            array('matricula' => 5, 'nome' => strtoupper('Stifler')),
+            array('matricula' => 6, 'nome' => strtoupper('Finch'))
+        );
+        
+        $deputadosNovos = array(
+            array('matricula' => 7, 'nome' => strtoupper('Reginaldo Rossi')),
+            array('matricula' => 8, 'nome' => strtoupper('Chimbinha'))
+        );
+        
+        $this->repoMock->expects($this->once())->method('getDeputadosAtuais')->will($this->returnValue($deputadosBD));
+        
+        $this->repoMock->expects($this->once())->method('inserirNovosDeputados')
+                ->with($deputadosNovos)
+                ->will($this->returnValue(true));
+        
         $this->builder->atualizarListaDeputados();
     }
-    
-    
-    public function testAtualizarDeputados()
-    {
-        $this->builder->atualizarDeputados($listaDep);
-    }
-    
-
-    */
 
 }

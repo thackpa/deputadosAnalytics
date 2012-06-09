@@ -27,7 +27,7 @@ $console->register('atualizar')
                     $output->write("\n\tDeputados Retrieving enabled\n\n");
                   }
 
-                  $deputadoBuilder = new DA\Builder\DeputadoData($app);
+                  $deputadoBuilder = new DA\Builder\Deputado($app);
                   $deputadoBuilder->atualizarListaDeputados();
                 }
 );

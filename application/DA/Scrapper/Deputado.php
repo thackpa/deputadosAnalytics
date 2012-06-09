@@ -12,16 +12,22 @@ class Deputado extends Scrapper
         parent::__construct();
     }
     
+    
+    /**
+     * @desc Pega todos os Deputados que estão listados no combo box da url que está na configuração.
+     * @return array array( array('matricula' => number $matricula, 'nome' => String $nome), ...) 
+     */
     public function getAll()
     {
+        die('nao pode entrar aqui');
         $deputados = array();
         $crawler = $this->request($this->app['config']['url.deputados']);
         $nodes = $crawler->filter('option');
         foreach($nodes as $node){
-            $dados = explode("!", $node->getAttribute('value'));
+            $dados = explode('!', $node->getAttribute('value'));
             
             if(count($dados) == 2)
-                $deputados[] = array($dados[1],$dados[0]);
+                $deputados[] = array('matricula' => $dados[1], 'nome' => $dados[0]);
         }
         return $deputados;
     }

@@ -31,10 +31,10 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         $deputados = $this->scrapper->getAll();
         
         $this->assertTrue(is_array($deputados[0]));
-        $this->assertTrue(is_numeric($deputados[0][0]));
-        $this->assertTrue(is_string($deputados[0][1]));
+        $this->assertTrue(is_numeric($deputados[0]['matricula']));
+        $this->assertTrue(is_string($deputados[0]['nome']));
         $this->assertEquals(513,count($deputados));
-        $this->assertEquals(509,array_search(array(74354,strtoupper("ZENALDO COUTINHO")), $deputados));
+        $this->assertEquals(509,array_search(array('matricula' => 74354, 'nome' => strtoupper("ZENALDO COUTINHO")), $deputados));
     }
     
 }

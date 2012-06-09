@@ -20,5 +20,10 @@ class Deputado extends Repository
             return $listaAtual;
     }
     
+    public function inserirNovosDeputados()
+    {
+        return true;
+    }
+    
     
 }

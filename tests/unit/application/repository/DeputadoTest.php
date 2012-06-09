@@ -33,4 +33,9 @@ class DeputadoTest extends \Base\DB
         $this->repository->getDeputadosAtuais();
     }
     
+    public function testInserirNovosDeputados()
+    {
+        $this->repository->inserirNovosDeputados();
+    }
+    
 }
