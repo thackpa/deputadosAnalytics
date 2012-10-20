@@ -51,11 +51,7 @@ class DeputadoTest extends \Base\DB
         
         $returned = $this->repository->inserirNovosDeputados($deputadosParam);
         
-        print $returned;
-        
-        $this->assertTrue($returned);
-        
-        
+        $this->assertEquals(count($deputadosParam), count($returned));
     }
     
 }

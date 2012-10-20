@@ -21,4 +21,8 @@ $app['config'] = $config2[APPLICATION_ENV];
 //End to change to pimple
 
 
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+    'monolog.logfile' => __DIR__.'/../log/live.log',
+));
+
 return $app;

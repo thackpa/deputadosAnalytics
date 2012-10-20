@@ -7,6 +7,10 @@ class Repository
 {
     
     private $app;
+    /**
+     *
+     * @var \Doctrine\DBAL\Connection 
+     */
     private $db;
     
     public function __construct($app)
@@ -31,6 +35,10 @@ class Repository
         $this->db = $this->app['db'];
     }
     
+    /**
+     * 
+     * @return \Doctrine\DBAL\Connection
+     */
     protected function getDb()
     {
         return $this->db;

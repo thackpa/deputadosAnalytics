@@ -38,8 +38,6 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
                                 ->getMock(); 
         
         $this->builder = new \DA\Builder\Deputado($this->app,$this->scrapperMock,$this->repoMock);
-        
-        //$this->setProtectedAtributes('');
     }
     
     protected function tearDown() {
@@ -59,7 +57,9 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
             array('matricula' => 8, 'nome' => strtoupper('Chimbinha'))
         );
         
-        $this->scrapperMock->expects($this->once())->method('getAll')->will($this->returnValue($deputadosOnline));
+        $this->scrapperMock->expects($this->once())
+                            ->method('getAll')
+                            ->will($this->returnValue($deputadosOnline));
         
         $deputadosBD = array(
             array('matricula' => 1, 'nome' => strtoupper('Jaca Rato')),
@@ -75,9 +75,12 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
             array('matricula' => 8, 'nome' => strtoupper('Chimbinha'))
         );
         
-        $this->repoMock->expects($this->once())->method('getDeputadosAtuais')->will($this->returnValue($deputadosBD));
+        $this->repoMock->expects($this->once())
+                        ->method('getDeputadosAtuais')
+                        ->will($this->returnValue($deputadosBD));
         
-        $this->repoMock->expects($this->once())->method('inserirNovosDeputados')
+        $this->repoMock->expects($this->once())
+                ->method('inserirNovosDeputados')
                 ->with($deputadosNovos)
                 ->will($this->returnValue(true));
         

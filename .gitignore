@@ -4,6 +4,7 @@ composer.lock
 composer.phar
 .settings/
 build/
+vendor/monolog/
 vendor/symfony/
 vendor/bin/
 vendor/doctrine/

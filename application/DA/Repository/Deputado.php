@@ -20,9 +20,14 @@ class Deputado extends Repository
             return $listaAtual;
     }
     
-    public function inserirNovosDeputados()
+    public function inserirNovosDeputados(array $deputados)
     {
-
+        $res = array();
+        foreach ($deputados as $deputado) {
+            $res[] = $this->getDb()->insert('deputado', $deputado);
+        }
+        
+        return $res;
     }
     
     

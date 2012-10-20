@@ -12,20 +12,27 @@ class Deputado extends Builder
     {
         parent::__construct($app);
         
-        if(! $scrapper)
+        if(! $scrapper) {
             $this->deputadoScrapper     = new \DA\Scrapper\Deputado($app);
-        else
+        } else {
             $this->deputadoScrapper     = $scrapper;
+        }
         
-        if(!$repository)
+        if(!$repository) {
             $this->deputadoRepository   = new \DA\Repository\Deputado($app);
-        else
+        } else {
             $this->deputadoRepository   = $repository;
+        }
     }
     
     public function atualizarListaDeputados()
     {  
+      $this->app['monolog']->addInfo("\n\n Iniciando a atualizacao de deputados!");  
+        
       $deputadosOnline  = $this->deputadoScrapper->getAll();
+      
+      $this->app['monolog']->addInfo(sprintf("Recuperados %s deputados da página.", count($deputadosOnline)));
+      
       $matriculasOnline = $this->getMatriculasFromArray($deputadosOnline);
       
       $deputadosBD      = $this->deputadoRepository->getDeputadosAtuais();
@@ -35,7 +42,11 @@ class Deputado extends Builder
       
       $novosDeputados   = $this->getNovosDeputados($deputadosOnline, $novasMatriculas);
       
-      return $this->deputadoRepository->inserirNovosDeputados($novosDeputados);
+      $this->app['monolog']->addInfo(sprintf("Diferenca de %s novos deputados.", count($novosDeputados)));
+      
+      $retorno = $this->deputadoRepository->inserirNovosDeputados($novosDeputados);
+      
+      $this->app['monolog']->addInfo(sprintf("Inseridos %s novos deputados.", count($retorno)));
     }
     
     #TODO: Otimizar esse método
