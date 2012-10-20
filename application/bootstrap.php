@@ -1,18 +1,13 @@
 <?php
+
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', __DIR__);
 
-require __DIR__.'/../vendor/.composer/autoload.php';
-require_once __DIR__ . '/../vendor/goutte.phar';
-$vendor = require __DIR__.'/../vendor/.composer/autoload_namespaces.php';
-
-$configFile = APPLICATION_PATH."/../config/config.ini";
-
+require __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
-$app[ 'autoloader' ]->registerNamespace('DA', APPLICATION_PATH);
-$app[ 'autoloader' ]->register();
 
-
+//Change to Pimple
+$configFile = APPLICATION_PATH."/../config/config.ini";
 $config = parse_ini_file($configFile,true);
 $config2 = array();
 array_walk($config, function($val,$key) use (&$config2) { 
@@ -23,5 +18,7 @@ array_walk($config, function($val,$key) use (&$config2) {
 });
 
 $app['config'] = $config2[APPLICATION_ENV];
+//End to change to pimple
+
 
 return $app;

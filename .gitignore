@@ -9,5 +9,9 @@ vendor/bin/
 vendor/doctrine/
 vendor/silex/
 vendor/pimple/
+vendor/autoload.php
+vendor/composer/
+vendor/fabpot/
+vendor/guzzle/
 vendor/.composer/
 nbproject/

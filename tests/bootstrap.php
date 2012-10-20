@@ -1,17 +1,15 @@
 <?php 
 
-defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'automatedtests'));
+define('APPLICATION_ENV', 'automatedtests');
 
 $app = require __DIR__ . '/../application/bootstrap.php';
 
-$app[ 'autoloader' ]->registerNamespace('Base', APPLICATION_PATH.'/../tests/');
-$app[ 'autoloader' ]->register();
-
 DA\Util\Registry::set("app", $app);
 
-//Criar o banco
-$config = new \Doctrine\DBAL\Configuration();
 
+
+//
+//Create a simple migration system
 $connectionParams = array(
     'dbname' => $app['config']['bd.name'],
     'user' => $app['config']['bd.user'],
@@ -20,7 +18,7 @@ $connectionParams = array(
     'driver' => $app['config']['bd.driver'],
 );
 
-$conn = Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
+$conn = Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
 $sql = file_get_contents(__DIR__."/../config/database/banco.sql");
 
