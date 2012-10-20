@@ -43,7 +43,19 @@ class DeputadoTest extends \Base\DB
     
     public function testInserirNovosDeputados()
     {
-        $this->repository->inserirNovosDeputados();
+        $deputadosParam = array(
+            array('id' => '4', 'matricula' => '1237', 'nome' => 'Rafinha Bastos'),
+            array('id' => '5', 'matricula' => '1238', 'nome' => 'Danilo Gentili'),
+            array('id' => '6', 'matricula' => '1239', 'nome' => 'Marcelo Tas')
+        );
+        
+        $returned = $this->repository->inserirNovosDeputados($deputadosParam);
+        
+        print $returned;
+        
+        $this->assertTrue($returned);
+        
+        
     }
     
 }
