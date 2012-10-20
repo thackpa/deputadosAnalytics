@@ -12,7 +12,7 @@ class Deputado extends Repository
     
     public function getDeputadosAtuais()
     {
-        $listaAtual = $this->getDb()->fetchAssoc("SELECT * FROM deputado");
+        $listaAtual = $this->getDb()->fetchAll("SELECT * FROM deputado");
         
         if(!$listaAtual)
             return array();
@@ -22,7 +22,7 @@ class Deputado extends Repository
     
     public function inserirNovosDeputados()
     {
-        return true;
+
     }
     
     

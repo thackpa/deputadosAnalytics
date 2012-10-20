@@ -30,7 +30,15 @@ class DeputadoTest extends \Base\DB
     
     public function testGetDeputadosAtuais()
     {
-        $this->repository->getDeputadosAtuais();
+        $deputadosExpected = array(
+            array('id' => '1', 'matricula' => '1234', 'nome' => 'Sérgio Malandro'),
+            array('id' => '2', 'matricula' => '1235', 'nome' => 'Chico Anísio'),
+            array('id' => '3', 'matricula' => '1236', 'nome' => 'Millor')
+        );
+        
+        $deputados = $this->repository->getDeputadosAtuais();
+        
+        $this->assertSame($deputadosExpected, $deputados);
     }
     
     public function testInserirNovosDeputados()
