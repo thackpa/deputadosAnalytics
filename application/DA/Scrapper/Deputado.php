@@ -19,19 +19,46 @@ class Deputado extends Scrapper
      */
     public function getAll()
     {
-        $deputados = array();
-        
         $crawler = $this->request($this->app['config']['url.deputados']);
+        $nodes   = $crawler->filter('#formDepAtual');
         
+        $legislatura = $this->getLegislatura($nodes);   
+        $deputados   = $this->getDeputadosData($nodes);
         
-        $nodes = $crawler->filter('option');
-        foreach($nodes as $node){
-            $dados = explode('!', $node->getAttribute('value'));
-            
-            if(count($dados) == 2)
-                $deputados[] = array('matricula' => $dados[1], 'nome' => $dados[0]);
-        }
-        return $deputados;
+        return array(
+            'legislatura' => $legislatura,
+            'deputados' => $deputados
+        );
+    }
+    
+    private function getDeputadosData(\Symfony\Component\DomCrawler\Crawler $crawler)
+    {
+        $deps = array();
+        $deps = $crawler->filter('#deputado > option')->each(function ($node, $i){
+            $dep = array();
+            if($i != 0) {
+                $dados              = explode('|', $node->getAttribute('value'));
+                $dep['nome']   = utf8_decode($dados[0]);
+                $dados              = explode('%', $dados[1]);
+                $dep['numero'] = $dados[0];
+                $dados              = explode('!', $dados[1]);
+                $dep['matricula'] = $dados[0];
+                $dados              = explode('=', $dados[1]);
+                $dep['estado'] = $dados[0];
+                $dados              = explode('?', $dados[1]);
+                $dep['partido']       = $dados[0];
+                $dep['identificacao'] = $dados[1];
+                return $dep;
+            }
+        });    
+        array_shift($deps);
+        return $deps;
+    }
+    
+    private function getLegislatura(\Symfony\Component\DomCrawler\Crawler $crawler)
+    {
+        $legislatura = $crawler->filter('#leg')->first();
+        return $legislatura->attr('value');
     }
     
 }

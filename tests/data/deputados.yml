@@ -3,11 +3,23 @@ deputado:
     id: 1
     matricula: "1234"
     nome: "Sérgio Malandro"
+    numero: "2345"
+    identificacao: "3456"
+    estado: "RJ"
+    partido: "PHAT"
   -
     id: 2
     matricula: "1235"
     nome: "Chico Anísio"
+    numero: "2346"
+    identificacao: "3457"
+    estado: "CE"
+    partido: "PHM"
   -
     id: 3
     matricula: "1236"
     nome: "Millor"
+    numero: "2347"
+    identificacao: "3458"
+    estado: "SP"
+    partido: "PHM"

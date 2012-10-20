@@ -28,13 +28,21 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         $crawler->addContent($content);
         
         $this->scrapper->expects($this->once())->method('request')->with($this->app['config']['url.deputados'])->will($this->returnValue($crawler));
-        $deputados = $this->scrapper->getAll();
+        $data = $this->scrapper->getAll();
+        
+        $deputados = $data['deputados'];
         
         $this->assertTrue(is_array($deputados[0]));
         $this->assertTrue(is_numeric($deputados[0]['matricula']));
         $this->assertTrue(is_string($deputados[0]['nome']));
+        $this->assertTrue(is_numeric($deputados[0]['numero']));
+        $this->assertTrue(is_numeric($deputados[0]['identificacao']));
+        $this->assertTrue(is_string($deputados[0]['estado']));
+        $this->assertTrue(is_string($deputados[0]['partido']));
         $this->assertEquals(513,count($deputados));
-        $this->assertEquals(509,array_search(array('matricula' => 74354, 'nome' => strtoupper("ZENALDO COUTINHO")), $deputados));
+        
+        $this->assertEquals('54', $data['legislatura']);
+        
     }
     
 }

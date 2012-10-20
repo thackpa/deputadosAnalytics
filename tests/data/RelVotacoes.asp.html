@@ -1,0 +1,5357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Internet Explorer fix, forces IE8 into newest possible rendering
+         engine even if it's on an intranet. This has to be defined before any
+         script/style tags. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<style type="text/css">@import url(/internet/biblioteca/js/smoothness/ui.all.css);</style>
+	<script src="RelVotacoes.asp_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="RelVotacoes.asp_files/jquery-1.js"></script>
+	<script type="text/javascript" src="RelVotacoes.asp_files/jquery-ui-1.js"></script>
+	<script type="text/javascript" src="RelVotacoes.asp_files/ui.js"></script>
+	<script type="text/javascript" src="RelVotacoes.asp_files/ui_002.js"></script>
+	<script type="text/javascript" src="RelVotacoes.asp_files/ui_003.js"></script>
+	<script type="text/javascript" src="RelVotacoes.asp_files/jquery.js"></script>           
+	<script type="text/javascript" src="RelVotacoes.asp_files/GoogleAnalyticsTracker.js"></script>
+	
+    <style type="text/css">@import url(http://www2.camara.gov.br/ploneExterno.css);</style>
+    
+	<!--
+	<script type="text/javascript"
+              	src="http://www2.camara.gov.br/portal_javascripts/mensagemSaida.js"> 
+      	</script> 
+-->
+
+        
+    <!-- IE6 workaround CSS/JS  -->
+    <!--[if lte IE 7]>
+        <style type="text/css" media="all">@import url(http://www2.camara.gov.br/IEFixes.css);</style>        
+        <script type="text/javascript"
+                src="http://www2.camara.gov.br/iefixes.js"> </script>
+        <script type="text/javascript"
+                src="http://www2.camara.gov.br/menuForIE6.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="http://www2.camara.gov.br/favicon.ico">
+    <link rel="home" href="http://www2.camara.gov.br/" title="Página inicial">
+    <link rel="contents" href="http://www2.camara.gov.br/sitemap" title="Mapa do Site">
+    <link rel="search" href="http://www2.camara.gov.br/busca" title="Search this site">
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no">
+          
+
+<title>Relatório de Votações em Plenário</title>
+
+  <script type="text/javascript">
+	$(function() {    
+    $("#portlet-menu .grupo").toggle(function(){
+        $(this).addClass("fechado");
+        }, function () {
+        $(this).removeClass("fechado");
+    });
+    $("#portlet-menu .grupo").click(function(){
+        $(this).next("ul").slideToggle("slow");
+    });
+});
+</script>
+
+  </head>
+  <body dir="ltr">
+    <div id="visual-portal-wrapper">
+      <div id="portal-top">
+ 
+        <div id="portal-header">
+			<p class="hiddenStructure">
+			  <a accesskey="2" href="#documentContent">Ir para o conteúdo.</a> |
+			 
+			  <a accesskey="6" href="#portlet-navigation-tree">Ir para a navegação</a>
+			</p>
+			 
+			<a id="portal-logo" accesskey="1" href="http://www2.camara.gov.br/">
+			    <img src="RelVotacoes.asp_files/logo.jpg" alt="" title="" height="33" width="285"></a>
+		 
+			<ul id="portal-siteactions">
+				<li class="faq" id="siteaction-faq">
+    					<a href="http://www2.camara.gov.br/participe/fale-conosco/perguntas-frequentes" accesskey="" title="Ir para Perguntas Frequentes">
+        					<span class="hiddenStructure">Perguntas Frequentes</span>
+      						<img src="RelVotacoes.asp_files/ico_topo_faq.png" alt="Perguntas Frequentes" title="Perguntas Frequentes" height="26" width="26">
+    					</a>
+  </li>
+						    
+			    <li class="contact" id="siteaction-contact">
+  				 	<a href="http://www2.camara.gov.br/participe/fale-conosco?contexto=" class="visualNoPrint" accesskey="9" title="Fale Conosco">
+   				 <img src="RelVotacoes.asp_files/ico_topo_faleconosco.png" alt="Fale conosco" height="26" width="26">
+   				</a>   
+  				</li>
+        		<li class="senado" id="siteaction-senado">
+        			 <a href="http://www.senado.gov.br/" class="visualNoPrint" accesskey="" title="Ir para o Senado Federal">
+    				<img src="RelVotacoes.asp_files/ico_topo_senado.png" alt="Senado" height="26" width="26">
+   				</a>
+        		</li>
+  				<li class="tcu" id="siteaction-tcu">
+  					<a href="http://www.tcu.gov.br/" class="visualNoPrint" accesskey="" title="Ir para o TCU - Tribunal de Contas da União">
+   				 <img src="RelVotacoes.asp_files/ico_topo_tcu.png" alt="TCU" height="26" width="26">
+  					 </a>
+ 				 </li>
+			</ul>
+	 
+ 
+			<div id="portal-searchbox">
+			    <form name="busca" action="http://www2.camara.gov.br/busca">
+			 
+			        <label for="searchGadget" class="hiddenStructure">Busca</label>
+			 
+			        <div class="LSBox">
+			        <input name="q" size="18" title="Buscar no Site" accesskey="4" class="inputLabel" id="searchGadget" type="text">
+			 
+			        <input class="imagedButton" value="Buscar" src="RelVotacoes.asp_files/btn_pesquisar_topo.gif" alt="Submeta sua busca" type="image">
+			    
+			    </div></form>
+			</div>
+ 
+			<ul id="accessibility-buttons" class="visualNoPrint">
+				<li><a href="javascript:setBaseFontSize('smallText',1);"><img alt="Retorne o texto ao tamanho normal" src="RelVotacoes.asp_files/btn_a_menos_topo.gif" height="25" width="25"></a></li>
+				<li><a href="javascript:setBaseFontSize('largeText',%201);"><img alt="Aumente o tamanho do texto" src="RelVotacoes.asp_files/btn_a_mais_topo.gif" height="25" width="25"></a></li>
+			</ul>
+			
+			<ul id="portal-globalnav" class="clearedBox">
+				<li class="">
+			     <a href="#" onclick="return false;">A Câmara</a>
+		        <ul class="submenu multicolumn">
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/conheca">Conheça a Câmara</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/altosestudos">Conselho de Altos Estudos</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/eticaedecoro">Conselho de Ética e Decoro Parlamentar</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/estruturaadm">Estrutura Administrativa</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/mesa">Mesa Diretora</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/ouvidoria">Ouvidoria Parlamentar</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/presidencia">Presidência</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/procuradoriadamulher">Procuradoria da Mulher</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/procuradoria-parlamentar">Procuradoria Parlamentar</a>
+		            </li>
+		            <li>
+		                <a href="http://www2.camara.gov.br/a-camara/programas-institucionais">Programas Institucionais</a>
+		            </li>
+		
+		
+		        </ul>
+				</li>
+				<li class="selected">
+					<a href="#" onclick="return false;">Deputados</a>
+						<ul class="submenu multicolumn">
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/deputados/pesquisa">Conheça os Deputados</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/deputados/discursos-e-notas-taquigraficas">Discursos e Notas Taquigráficas</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/deputados/frentes-parlamentares">Frentes Parlamentares</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/deputados/historico-de-movimentacao-parlamentar">Histórico de Movimentação Parlamentar</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/deputados/liderancas-e-bancadas">Lideranças e Bancadas</a>
+		                  </li>
+
+
+		              </ul>				</li>
+				<li class="">
+					     <a href="#" onclick="return false;">Atividade Legislativa</a>
+					              <ul class="submenu multicolumn">
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/agenda">Agenda</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/comissoes">Comissões</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/processolegislativo">Conheça o Processo Legislativo</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/legislacao">Legislação</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/orcamentobrasil">Orçamento Brasil</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/plenario">Plenário</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/projetos-de-lei-e-outras-proposicoes">Projetos de Lei e Outras Proposições</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/atividade-legislativa/webcamara">WebCâmara</a>
+					                  </li>
+			 
+			 
+					              </ul>
+					 </li>
+						<li class="">
+					     <a href="#" onclick="return false;">Documentos e Pesquisa</a>
+					              <ul class="submenu multicolumn">
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/documentos-e-pesquisa/biblioteca-digital">Biblioteca Digital</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/documentos-e-pesquisa/biblarq">Biblioteca e Arquivo</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/documentos-e-pesquisa/fiquePorDentro">Fique por Dentro</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/documentos-e-pesquisa/publicacoes">Publicações e Estudos</a>
+					                  </li>
+			 
+			 
+					              </ul>
+					 </li>
+						<li class="">
+					     <a href="#" onclick="return false;">Notícias</a>
+					              <ul class="submenu multicolumn">
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/agencia-camara">Agência Câmara</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/assessoria-de-imprensa">Assessoria de Imprensa</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/banco-de-imagens">Banco de Imagens</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/institucional">Institucional</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/jornal">Jornal da Câmara</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/radio">Rádio Câmara</a>
+					                  </li>
+					                  <li>
+					                      <a href="http://www2.camara.gov.br/noticias/tv">TV Câmara</a>
+					                  </li>
+					              </ul>
+					 </li>
+						<li class="">
+					     <a href="#" onclick="return false;">Transparência</a>
+						<ul class="submenu multicolumn">
+
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/a-transparencia-na-camara">A Transparência na Câmara</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/acompanhe-seu-deputado">Acompanhe seu Deputado</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/concursos">Concursos</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/cota-para-exercicio-da-atividade-parlamentar">Cota para Exercício da Atividade Parlamentar</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/dados-abertos">Dados Abertos</a>
+		                  </li>
+		                  <li>
+			              <a href="http://www2.camara.gov.br/transparencia/fiscalize">Fiscalize o Orçamento</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/gestao-na-camara-dos-deputados">Gestão na Câmara dos Deputados</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/imoveis-funcionais">Imóveis Funcionais e Auxílio-Moradia</a>
+    				  </li>
+				  <li>
+				      <a href="http://www2.camara.gov.br/transparencia/lei-de-acesso-a-informacao">Lei de Acesso à Informação</a>
+				  </li>
+				  <li>
+				      <a href="http://www2.camara.gov.br/transparencia/licitacoes">Licitações e Contratos</a>
+				  </li>
+				  <li><a href="http://www2.camara.gov.br/transparencia/obras-em-andamento">Obras em Andamento</a>
+				  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/recursos-humanos">Recursos Humanos</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/viagens-em-missao-oficial">Viagens em Missão Oficial</a>
+		                  </li>
+
+
+		              
+		              </ul>
+					 </li>
+						<li class="">
+					     <a href="#" onclick="return false;">Responsabilidade Social</a>
+						<ul class="submenu multicolumn">
+
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/a-pratica-na-camara">A prática na Câmara</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/acessibilidade">Acessibilidade</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/bosque-dos-constituintes">Bosque dos Constituintes</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/ecocamara">EcoCâmara</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/edulegislativa">Educação Legislativa e Estágios</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/parlamentojovem">Parlamento Jovem</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/plenarinho">Plenarinho</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/responsabilidade-social/programa-pro-adolescente">Programa Pró-Adolescente</a>
+		                  </li>
+
+
+		              
+		              </ul>					 </li>
+						<li class="ultimo ">
+					     <a href="#" onclick="return false;">Participe</a>
+						<ul class="submenu multicolumn">
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/foruns-e-bate-papo">Bate-Papos</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/e-democracia">Debates no e-Democracia</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/fale-com-a-ouvidoria">Fale com a Ouvidoria</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/fale-com-o-deputado">Fale com o Deputado</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/fale-conosco">Fale Conosco</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/redes-sociais">Redes Sociais</a>
+		                  </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/participe/sua-proposta-pode-virar-lei">Sua proposta pode virar Lei</a>
+		                  </li>
+
+
+		              </ul>
+					 </li>
+			</ul>
+			<img src="RelVotacoes.asp_files/img_topo_padrao.jpg" title="" class="visualNoPrint" id="imgTopo" alt="">
+			</div> <!-- portal-header //-->
+			
+			<div id="portal-breadcrumbs">
+			 
+			    <span id="breadcrumbs-you-are-here">Você está aqui:</span>
+			    <a href="http://www2.camara.gov.br/">Página Inicial</a>
+			    <span class="breadcrumbSeparator">
+			        &gt;
+			        
+			    </span>
+			    <a href="http://www2.camara.gov.br/deputados">Deputados</a> &gt; <a href="http://www2.camara.gov.br/deputados/pesquisa">Conheça os Deputados</a> &gt; Votações em Plenário
+		</div> <!-- portal-breadcrumbs // -->
+ 
+		<div id="portal-mainsection">
+		 
+			<h2><a href="#">Relatório de Votações em Plenário</a></h2>
+
+		</div>
+ 
+      </div> <!-- portal-top // -->
+  
+      <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+      <div id="portal-columns">
+			    
+
+<style type="text/css" media="print"> 
+		.borderPrint{
+			border-top:1px solid #333; 
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+		table{
+			border-collapse:collapse;
+		}
+</style>
+
+<div id="portal-column-content" class="sl">
+    <div id="portal-content-wrapper">
+         <div id="region-content" class="documentContent">
+                <a name="documentContent"></a>
+                <div id="content">
+					
+	
+					<h3>Nome Parlamentar:&nbsp;<a href="http://www.camara.gov.br/internet/deputado/Dep_Detalhe.asp?id=530659">ACELINO POPÓ - PRB/BA</a></h3>
+					<table class="tabela-1">
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Sessão/Votação</th>
+								<th>Freqüência na sessão</th>
+								<th>Voto</th>
+								<th>Justificativa</th>
+							</tr>
+						</thead>
+
+						<!--C�digo reestilizado por Rodrigo Santana em 09 de Julho de 2010-->
+						
+									<tbody><tr class="even">
+										<td class="borderPrint">
+											15/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 011 - 15/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 349/2011 - URGÊNCIA PARA O PL 382/2011
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											16/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 013 - 16/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 382/2011 - DVS - PSDB - EMENDA Nº 1
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 382/2011 - DVS - DEM - EMENDA Nº 22
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											16/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 014 - 16/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 382/2011 - DVS - Bloco PvPps - EXPR: "por meio de decreto" - ART. 3º DO PL 382/2011 (...)
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											22/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 019 - 22/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 502/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 502/2010 - REQUERIMENTO DE ADIAMENTO DA DISCUSSÃO POR 1 SESSÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											22/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 020 - 22/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 502/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											23/02/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 021 - 23/02/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 503/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 057 - 05/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - REQUERIMENTO DE CONCESSÃO DE PRAZO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 058 - 05/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - REQUERIMENTO DE ENCERRAMENTO DA DISCUSSÃO E ENCAMINHAMENTO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											06/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 059 - 06/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - DVS - PSDB - EXPR. "autoriza... ETAV" CONST. DO ART. 1º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 511/2010 - DVS - DEM - ART. 23 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											06/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 060 - 06/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 343/2011 - URGÊNCIA PARA PDC Nº 2600/2010
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 2600/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 2600/2010 - REQUERIMENTO DE ADIAMENTO DA DISCUSSÃO POR 1 SESSÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 2600/2010 - PROJETO DE DECRETO LEGISLATIVO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											13/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 068 - 13/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 512/2010 - DVS - PT - § 7º DO ART. 11-B CONSTANTE DO ART. 1º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 512/2010 - DVS - PV - ART. 2º  DO  PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											26/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 084 - 26/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 513/2010 - DVS - PSDB -  ART. 5º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											27/04/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 085 - 27/04/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 514/2010 - REQ. DE CONCESSÃO DE PRAZO POR 1 SESSÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											03/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 093 - 03/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 7537/2010 - URGÊNCIA PARA O PL Nº 1876/1999
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											10/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 102 - 10/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 521/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 107 - 11/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1876/1999 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											18/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 115 - 18/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQUERIMENTO - CONVOCAÇÃO PARA SESSÃO EXTRAORDINÁRIA - VOT. REQ. CONV. MINISTRO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											18/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 116 - 18/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 517/2010 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											24/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 123 - 24/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1876/1999 - EMENDA SUBSTITUTIVA GLOBAL DE PLENÁRIO Nº 186
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1876/1999 - DVS - PMDB - EMENDA Nº 164
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											25/05/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 126 - 25/05/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 517/2010 - DVS - PSDB - ART. 20 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 517/2010 - DVS - PV-PPS - EMENDA 64
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 517/2010 - DVS - DEM - ART. 24 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											08/06/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 145 - 08/06/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 2086/2011 - MOÇÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											15/06/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 153 - 15/06/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											15/06/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 154 - 15/06/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - PROJETO DE LEI DE CONVERSÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											28/06/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 167 - 28/06/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - DVS - DEM - CAPÍTULO I DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - DVS - PSDB - § 3º DO ART. 8º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											28/06/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 168 - 28/06/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - DVS - PSDB - ART. 9º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - DVS - PSDB - EXPRESSÃO "básico e" § 1º DO ART. 9º DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 527/2011 - DVS - DEM - INC. IV DO ART. 24d DA LEI 10.683/03 (ART. 1º DA MP)
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/07/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 175 - 05/07/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 528/2011 - DVS - PSDB - EMENDA Nº 3
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 528/2011 - DVS - DEM - EMENDA Nº 34
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											03/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 190 - 03/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 530/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 530/2011 - REQ. DE CONCESSÃO DO PRAZO DE 1 SESSÃO P/ VOTAÇÃO DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											03/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 191 - 03/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 530/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 201 - 11/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 1351/2008 - PROJETO DE DECRETO LEGISLATIVO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											16/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 206 - 16/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											17/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 208 - 17/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - REQUERIMENTO DE ENCERRAMENTO DA DISCUSSÃO E ENCAMINHAMENTO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											17/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 209 - 17/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - DVS - PSDB - ART. 12 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											23/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 215 - 23/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - DVS - DEM - § 3º DO ART. 1º DA MP, CONSTANTE DO ART. 12 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 532/2011 - DVS - PV-PPS - INC. II DO § 3º DO ART. 1º, CONST. DO ART. 12 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											23/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 216 - 23/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 2714/2011 - CONVOCAÇÃO DO MINISTRO DA CGU
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											24/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 217 - 24/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 533/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											24/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 218 - 24/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 533/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											30/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 225 - 30/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REP  Nº 1/2011 - CONTRA A DEPUTADA JAQUELINE RORIZ - PMN/DF
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Secreto
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											31/08/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 228 - 31/08/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1209/2011 - DVS - DEM - EMENDA Nº 28
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PLP  Nº 87/2011 - PROJETO DE LEI COMPLEMENTAR
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											01/09/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 229 - 01/09/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 47/2011 - PROJETO DE DECRETO LEGISLATIVO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											20/09/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 252 - 20/09/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1749/2011 - SUBSTITUTIVO DA COMISSÃO ESPECIAL
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											21/09/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 255 - 21/09/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PLP  Nº 306/2008 - DVS - DEM - ART. 16 DA SUBEMENDA SUBSTITUTIVA GLOBAL DA CFT
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 1548/2011 - URGÊNCIA PARA APRECIAÇÃO DO PL Nº 7376/2010
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 273 - 05/10/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 539/2011 - DVS - PSDB - EMENDA Nº 8
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 274 - 05/10/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 3937/2004 - DVS - PSDB - EMENDA Nº 18
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 281 - 11/10/2011
+										</td>
+										<td class="borderPrint">
+											Ausente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 220/2011 - PROJETO DE DECRETO LEGISLATIVO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											19/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 287 - 19/10/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 541/2011 - DVS - DEM - ART. 3º-A DA LEI 9933/99, ART. 13 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											26/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 299 - 26/10/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 540/2011 - DVS - PPS - ART. 46 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											27/10/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 300 - 27/10/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 220/2011 - PROJETO DE DECRETO LEGISLATIVO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											01/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 304 - 01/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC  Nº 220/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											08/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 313 - 08/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE ADIAMENTO DA VOTAÇÃO POR 5 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE ADIAMENTO DA VOTAÇÃO POR 4 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											08/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 314 - 08/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - PT - DESTAQUE DE PREFERÊNCIA PARA VOTAÇÃO DA PEC Nº 61/2011
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - EMENDA Nº 1
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - PROPOSTA DE EMENDA À CONSTITUIÇÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - DEM - CAPUT DO ART. 76 DO ADCT CONST. DO ART. 1º DA PEC 61/2011
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - DEM - EXP. "EM 20% NO ANO DE 2012,15% EM 2013, 10% EM 2014 E 5%  2015.
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											09/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 316 - 09/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PSDB - EXP. "ATÉ 31 DE DEZEMBRO DE 2013" EMENDA 4 SUB ART. 76 PEC
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PSDB - EXPRESSÃO "CONTRIBUIÇÕES SOCIAIS"
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PSDB - EXPRESSÃO "JÁ INSTITUÍDOS"
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											09/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 317 - 09/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PV/PPS - §  4º DO ART. 76 CONSTANTE DA EMENDA 1
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											22/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 331 - 22/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - REQUERIMENTO DE ADIAMENTO DA VOTAÇÃO POR 2 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - VOTAÇÃO EM SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											22/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 332 - 22/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PSDB - EXPRESSÃO "CONTRIBUIÇÕES SOCIAIS" CAPUT ART. 76
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - DEM- EXP " E DE INTERVENÇÃO DE DOMINIO ECONÔMICO" CAP ART. 76
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PSDB - EXPRESSÃO "JÁ INSTITUIDOS  " CAPUT  ART. 76
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS - PPS - EXP " OU QUE VIEREM A SER CRIADOS... LEGAIS " CAPUT ART. 76
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 61/2011 - DVS -DEM- EXP "OU QUE VIEREM A SER CRIADOS...DATA"   CAPUT ART. 76
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											23/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 333 -  23/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REC  Nº 92/2011 - RECURSO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											29/11/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 342 -  29/11/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Licença para Tratamento de Saúde
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 98/2007 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 98/2007 - VOTAÇÃO EM 1º TURNO DO SUBSTITUTIVO DA COMISSÃO ESPECIAL
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 98/2007 - DVS -PDT-EXP:" SALVO NA ETAPA DE...LASER", ART. 150, VI, e / ART.1º SUBST.
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											13/12/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 363 -  13/12/2011
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 98/2007 - SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 445/2009 - PRIMEIRO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											14/12/2011
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 367 -  14/12/2011
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº /2011 - REQUERIMENTO DE URGÊNCIA PARA O PRC Nº 103/2011 PSD
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 270/2008 - EMENDA AGLUTINATIVA  SUBSTITUTIVA GLOBAL  DE PLENÁRIO Nº 1
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										ELEIÇÃO - PARA MEMBRO DO CNJ - EMMANOEL CAMPELO DE SOUZA PEREIRA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Secreto
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											14/02/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 011 - 14/02/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 270/2008 - SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											28/02/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 020 - 28/02/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1992/2007 - SUBEMENDA SUBSTITUTIVA GLOBAL DE PLENÁRIO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											29/02/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 022 - 29/02/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1992/2007 - DVS - PSDB - ART. 4º DO PROJETO ORIGINAL (E SEUS CORRESPONDENTES.)...
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1992/2007 - DVS - PSDB - EMENDA 43
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1992/2007 - DVS - DEM - EMENDA 26
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											06/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 030 - 06/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 445/2009 - SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											07/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 032 - 07/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 4504/2012 - REQUERIMENTO DE URGÊNCIA PARA O PL Nº 2.330/2011
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											14/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 039 - 14/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 550/2011 - DVS - PSD - EMENDA 19
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											14/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 040 - 14/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										ELEIÇÃO - PARA O CNMP - SR. LUIZ MOREIRA GOMES JÚNIOR
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Secreto
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											20/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 049 - 20/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 5279/2009 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 301/2007 - REQUERIMENTO DE URGÊNCIA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											21/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 050 - 21/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 2330/2011 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											27/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 057 - 27/03/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 153/2003 - PRIMEIRO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											28/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 059 - 28/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 2330/2011 - DVS - PSDB/PSC/PvPps... -  EMENDA DE PLENÁRIO Nº 1
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											28/03/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 060 - 28/03/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 2330/2011 - DVS - PSC - EMENDA Nº 46
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											10/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 073 - 10/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 549/2011 - DVS - DEM - expressão "medicamentos" Art. 8º PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											10/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 074 - 10/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 153/2003 - 2º TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 075 - 11/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 551/2011 - DVS - PT - exp. "provenientes...público", do Art. 1º do PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 076 - 11/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 551/2011 - DVS - PSDB - Emenda nº 9
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											18/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 086 - 18/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PLP  Nº 230/2004 - SUBEMENDA SUBSTITUTIVA DE PLENÁRIO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											25/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 096 - 25/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1876/1999 - SUBSTITUTIVO DO SF - DISPOSITIVOS COM PARECER PELA REJEIÇÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											25/04/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 097 - 25/04/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 1876/1999 - DVS - PT - § 7º DO ART. 62, P/ FINS DE SUA MANUTENÇÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											09/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 114 - 09/05/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 554/2011 - DVS - PSDB - EMENDA 15
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											15/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 122- 15/05/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 558/2012 - PARECER DO RELATOR PELA ADMISSIBILIDADE
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											15/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 124 - 15/05/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 471/2005 - SUBSTITUTIVO DA COMISSÃO ESPECIAL - PRIMEIRO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											16/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 126 - 16/05/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PDC Nº 514/2011 - REQUERIMENTO DE URGÊNCIA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											22/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 134 - 22/05/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 3839/2012 - REQUERIMENTO DE URGÊNCIA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 438/2001 - SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											29/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 145 - 29/05/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PLP  Nº 362/2006 - SUBSTITUTIVO DA CFT AO PLP 362/2006
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											30/05/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 147 - 30/05/2012
+										</td>
+										<td class="borderPrint">
+											Ausente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 416/2005 - PRIMEIRO TURNO - SUBSTITUTIVO DA COMISSÃO ESPECIAL
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/06/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 154 - 05/06/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 559/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											12/06/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 160 - 12/06/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 559/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 559/2012 - REQUERIMENTO DE VOTAÇÃO ARTIGO POR ARTIGO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 559/2012 - DVS - PSDB - ART. 28 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											13/06/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 163 - 13/06/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PL   Nº 643/2011 - EMENDA DO RELATOR DA CCJC
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											26/06/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 178  - 26/06/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Decisão da Mesa
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										PEC  Nº 416/2005 - SEGUNDO TURNO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											27/06/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 180  - 27/06/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										REQ  Nº 4636/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											03/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 185  - 03/07/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 566/2012 - REQUERIMENTO DE ADIAMENTO DA DISCUSSÃO POR 2 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 566/2012 - REQUERIMENTO DE ADIAMENTO DA VOTAÇÃO POR 2 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											03/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 186  - 03/07/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 566/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											04/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 187  - 04/07/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 567/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											04/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 188  - 04/07/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 567/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 567/2012 - DVS - PSDB - EMENDA Nº 17
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 198  - 11/07/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO DE ADIAMENTO DA DISCUSSÃO POR 2 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO PARA  DISCUSSÃO ARTIGO POR ARTIGO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											11/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 199  - 11/07/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO DE ADIAMENTO DA VOTAÇÃO POR 2 SESSÕES
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											12/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 200  - 12/07/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											16/07/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 204  - 16/07/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 563/2012 - PROJETO DE LEI DE CONVERSÃO
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Sim            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											04/09/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 236 - 04/09/2012
+										</td>
+										<td class="borderPrint">
+											Ausente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 570/2012 - DVS - PSDB - ART. 14 DO PLV
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											05/09/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 238 - 05/09/2012
+										</td>
+										<td class="borderPrint">
+											Presente&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											---
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 571/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										Não            
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											18/09/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO ORDINÁRIA Nº 251 - 18/09/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 571/2012 - REQUERIMENTO DE RETIRADA DE PAUTA
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+									<tr class="even">
+										<td class="borderPrint">
+											18/09/2012
+										</td>
+										<td class="borderPrint">
+											SESSÃO EXTRAORDINÁRIA Nº 252 - 18/09/2012
+										</td>
+										<td class="borderPrint">
+											Ausência justificada&nbsp;<sup style="font-size:10px"></sup>
+										</td>
+										<td class="borderPrint">&nbsp;</td>
+										<td class="borderPrint" align="center">
+											Atendimento a Obrigação Político-Partidária
+										</td>
+									</tr>
+								
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										MPV  Nº 571/2012 - DVS - DEM - EMENDA 533
+									</td>
+									
+									
+									
+									<td>
+										&nbsp;&nbsp;<sup style="font-size:10px"></sup>
+									</td>
+									<td>
+										---
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+								
+						<!--Fim C�digo-->
+						
+						
+							
+						<!--<TR class=>
+								<TD></TD>
+								<TD></TD>
+								<TD>
+									
+									<br />
+									
+								</TD>
+								
+								
+								
+								<TD>
+									&nbsp;<sup style="font-size:10px"></sup>
+								</TD>
+								<TD></TD>
+							</TR>-->
+						
+					</tbody></table>	
+							
+					<div style="font-size:9px">		
+						<br>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+      </div> <!-- portal-columns -->
+      <div class="visualClear" id="clear-space-before-footer"><!-- --></div>
+<div id="portal-opennav" class="visualNoPrint"><a accesskey="3" name="sitemap-region" href="#sitemap-region" class="hiddenStructure">Mapa do Portal</a>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>A Câmara</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/conheca">Conheça a Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/altosestudos">Conselho de Altos Estudos</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/eticaedecoro">Conselho de Ética e Decoro Parlamentar</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/estruturaadm">Estrutura Administrativa</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/mesa">Mesa Diretora</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/ouvidoria">Ouvidoria Parlamentar</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/presidencia">Presidência</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/procuradoriadamulher">Procuradoria da Mulher</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/procuradoria-parlamentar">Procuradoria Parlamentar</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/a-camara/programas-institucionais">Programas Institucionais</a>
+			          </li>
+
+
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Deputados</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/deputados/pesquisa">Conheça os Deputados</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/deputados/discursos-e-notas-taquigraficas">Discursos e Notas Taquigráficas</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/deputados/frentes-parlamentares">Frentes Parlamentares</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/deputados/historico-de-movimentacao-parlamentar">Histórico de Movimentação Parlamentar</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/deputados/liderancas-e-bancadas">Lideranças e Bancadas</a>
+			          </li>
+
+
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Atividade Legislativa</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/agenda">Agenda</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/comissoes">Comissões</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/processolegislativo">Conheça o Processo Legislativo</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/legislacao">Legislação</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/orcamentobrasil">Orçamento Brasil</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/plenario">Plenário</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/projetos-de-lei-e-outras-proposicoes">Projetos de Lei e Outras Proposições</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/atividade-legislativa/webcamara">WebCâmara</a>
+			          </li>
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Documentos e Pesquisa</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/documentos-e-pesquisa/biblioteca-digital">Biblioteca Digital</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/documentos-e-pesquisa/biblarq">Biblioteca e Arquivo</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/documentos-e-pesquisa/fiquePorDentro">Fique por Dentro</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/documentos-e-pesquisa/publicacoes">Publicações e Estudos</a>
+			          </li>
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Notícias</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/agencia">Agência Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/assessoria-de-imprensa">Assessoria de Imprensa</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/banco-de-imagens">Banco de Imagens</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/institucional">Institucional</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/jornal">Jornal da Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/radio">Rádio Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/noticias/tv">TV Câmara</a>
+			          </li>
+
+
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Transparência</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/a-transparencia-na-camara">A Transparência na Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/acompanhe-seu-deputado">Acompanhe seu Deputado</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/concursos">Concursos</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/cota-para-exercicio-da-atividade-parlamentar">Cota para Exercício da Atividade Parlamentar</a>
+			          </li>
+		              <li>
+		                  <a href="http://www2.camara.gov.br/transparencia/dados-abertos">Dados Abertos</a>
+		              </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/fiscalize">Fiscalize o Orçamento</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/gestao-na-camara-dos-deputados">Gestão na Câmara dos Deputados</a>
+			          </li>
+		                  <li>
+		                      <a href="http://www2.camara.gov.br/transparencia/imoveis-funcionais">Imóveis Funcionais e Auxílio-Moradia</a>
+    				  </li>
+			          
+			         <li>
+				      <a href="http://www2.camara.gov.br/transparencia/lei-de-acesso-a-informacao">Lei de Acesso à Informação</a>
+				  </li>
+				  <li>
+				      <a href="http://www2.camara.gov.br/transparencia/licitacoes">Licitações e Contratos</a>
+				  </li>
+				  <li><a href="http://www2.camara.gov.br/transparencia/obras-em-andamento">Obras em Andamento</a>
+				  </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/recursos-humanos">Recursos Humanos</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/transparencia/viagens-em-missao-oficial">Viagens em Missão Oficial</a>
+			          </li>
+
+
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Responsabilidade Social</span>
+			  
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/a-pratica-na-camara">A prática na Câmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/acessibilidade">Acessibilidade</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/bosque-dos-constituintes">Bosque dos Constituintes</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/ecocamara">EcoCâmara</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/edulegislativa">Educação Legislativa e Estágios</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/parlamentojovem">Parlamento Jovem</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/plenarinho">Plenarinho</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/responsabilidade-social/programa-pro-adolescente">Programa Pró-Adolescente</a>
+			          </li>
+
+
+			      </ul>
+					  
+
+			  
+		 </li>
+	</ul>
+	<ul>                                                     
+		 <li class="grupo">
+		     <span>Participe</span>
+			      <ul class="submenu">
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/foruns-e-bate-papo">Bate-Papos</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/e-democracia">Debates no e-Democracia</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/eventos">Eventos</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/fale-com-a-ouvidoria">Fale com a Ouvidoria</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/fale-com-o-deputado">Fale com o Deputado</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/fale-conosco">Fale Conosco</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/redes-sociais">Redes Sociais</a>
+			          </li>
+			          <li>
+			              <a href="http://www2.camara.gov.br/participe/sua-proposta-pode-virar-lei">Sua proposta pode virar Lei</a>
+			          </li>
+			      </ul>
+		 </li>
+	</ul>
+	<div class="visualClear"><!-- --></div>
+</div>
+      <div id="portal-footer">
+		<address>
+			<p><span class="visualStrong">54ª Legislatura - 2ª Sessão Legislativa Ordinária</span><br>
+			Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - CEP 70160-900<br>
+			CNPJ 00.530.352/0001-59<br>
+			Telefone: +55 (61) 3216-0000 | Disque Câmara: 0800 619 619</p>
+		</address>
+		<div id="portal-utilities">
+
+		<ul>
+					<li>
+						<a href="http://www2.camara.gov.br/accessibility-info" accesskey="0">Acessibilidade</a></li>
+					<li>
+						<a href="http://www2.camara.gov.br/english">English</a></li>
+					<li>
+						<a href="http://www2.camara.gov.br/espanol">Español</a></li>
+					<li>
+						<a href="https://camaranet.camara.gov.br/">Extranet</a></li>
+					<li>
+						<a href="https://www2.camara.gov.br/participe/fale-conosco/perguntas-frequentes">Perguntas Frequentes</a></li>
+					<li>
+						<a href="http://www2.camara.gov.br/participe/fale-conosco">Fale Conosco </a></li>
+					<li>
+						<a href="http://www2.camara.gov.br/glossario">Glossario</a></li>
+					<li class="ultimo">
+						<a href="http://www2.camara.gov.br/sobre-o-portal">Sobre o Portal</a></li>
+					
+  			
+  			<li id="acessoProvedor"><a title="Autenticar-se no site" href="http://www2.camara.gov.br/login_form"><img alt="Autenticar-se no site" src="RelVotacoes.asp_files/ico_cadeado.jpg"></a></li>
+		</ul>
+
+		 
+		</div>
+	 
+	 
+	  </div>
+      <div class="visualClear"><!-- --></div>
+    </div> <!-- visual-portal-wrapper -->
+
+
+
+
+</div></body></html>
