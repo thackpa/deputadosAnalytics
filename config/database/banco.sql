@@ -3,13 +3,22 @@
 #SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
 CREATE TABLE IF NOT EXISTS deputado (
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-matricula VARCHAR(255) NOT NULL ,
-nome VARCHAR(255) NOT NULL,
-identificacao VARCHAR(255) NOT NULL ,
-numero VARCHAR(255) NOT NULL ,
-partido VARCHAR(6) NOT NULL ,
-estado CHAR(2) NOT NULL
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    matricula VARCHAR(255) NOT NULL ,
+    nome VARCHAR(255) NOT NULL,
+    identificacao VARCHAR(255) NOT NULL ,
+    numero VARCHAR(255) NOT NULL ,
+    partido VARCHAR(6) NOT NULL ,
+    estado CHAR(2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS presencasessao (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    deputadoId INT NOT NULL ,
+    data DATE NOT NULL,
+    sessao VARCHAR(255) NOT NULL,
+    comportamento VARCHAR(255) NOT NULL ,
+    justificativa VARCHAR(255) NOT NULL ,
 );
 
 

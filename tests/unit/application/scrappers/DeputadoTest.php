@@ -2,34 +2,17 @@
 
 namespace DA\Tests\Scrapper;
 
-use DA\Scrapper\Deputado, DA\Util\Registry, Symfony\Component\DomCrawler\Crawler;
-
-class DeputadoTest extends \PHPUnit_Framework_TestCase
+class DeputadoTest extends \Base\Scrapper
 {
     
-    private $scrapper;
-    private $app;
-    
     protected function setUp() {
-        parent::setUp();        
-        $this->app = Registry::get("app");
-        
-        $this->scrapper = $this->getMockBuilder('DA\Scrapper\Deputado')->setConstructorArgs(array($this->app))->setMethods(array('request'))->getMock(); 
-    }
-    
-    protected function tearDown() {
-        parent::tearDown();
+        parent::setUp('DA\Scrapper\Deputado');        
     }
     
     public function testGetMainInfo()
     {
-        $content = file_get_contents(__DIR__.'/../../../data/'.$this->app['config']['url.deputados']);
-        $crawler = new Crawler(null, $this->app['config']['url.deputados']);
-        $crawler->addContent($content);
-        
-        $this->scrapper->expects($this->once())->method('request')->with($this->app['config']['url.deputados'])->will($this->returnValue($crawler));
-        $data = $this->scrapper->getMainInfo();
-        
+        $this->setDataFromUrl('url.deputados');
+        $data = $this->scrapper->getMainInfo();        
         $deputados = $data['deputados'];
         
         $this->assertTrue(is_array($deputados[0]));
