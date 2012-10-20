@@ -46,7 +46,9 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
     
     public function testAtualizarListaDeputados()
     {
-        $deputadosOnline = array(
+        $info = array();
+        $info['legislatura'] = 54;
+        $info['deputados'] = array(
             array('matricula' => 1, 'nome' => strtoupper('Jaca Rato'), 'identificacao' => 1, 'numero' => 1, 'estado' => 'PA', 'partido' => 'PPPPP'),
             array('matricula' => 2, 'nome' => strtoupper('Jaca Paladium'), 'identificacao' => 2, 'numero' => 2, 'estado' => 'PA', 'partido' => 'PPPPP'),
             array('matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan'), 'identificacao' => 3, 'numero' => 3, 'estado' => 'PA', 'partido' => 'PPPPP'),
@@ -58,8 +60,8 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         );
         
         $this->scrapperMock->expects($this->once())
-                            ->method('getAll')
-                            ->will($this->returnValue($deputadosOnline));
+                            ->method('getMainInfo')
+                            ->will($this->returnValue($info));
         
         $deputadosBD = array(
             array('matricula' => 1, 'nome' => strtoupper('Jaca Rato'), 'identificacao' => 1, 'numero' => 1, 'estado' => 'PA', 'partido' => 'PPPPP'),

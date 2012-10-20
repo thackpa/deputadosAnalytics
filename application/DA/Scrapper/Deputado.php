@@ -17,7 +17,7 @@ class Deputado extends Scrapper
      * @desc Pega todos os Deputados que estão listados no combo box da url que está na configuração.
      * @return array array( array('matricula' => number $matricula, 'nome' => String $nome), ...) 
      */
-    public function getAll()
+    public function getMainInfo()
     {
         $crawler = $this->request($this->app['config']['url.deputados']);
         $nodes   = $crawler->filter('#formDepAtual');

@@ -21,14 +21,14 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         parent::tearDown();
     }
     
-    public function testGetAll()
+    public function testGetMainInfo()
     {
         $content = file_get_contents(__DIR__.'/../../../data/'.$this->app['config']['url.deputados']);
         $crawler = new Crawler(null, $this->app['config']['url.deputados']);
         $crawler->addContent($content);
         
         $this->scrapper->expects($this->once())->method('request')->with($this->app['config']['url.deputados'])->will($this->returnValue($crawler));
-        $data = $this->scrapper->getAll();
+        $data = $this->scrapper->getMainInfo();
         
         $deputados = $data['deputados'];
         

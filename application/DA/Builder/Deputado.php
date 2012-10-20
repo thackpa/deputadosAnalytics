@@ -29,18 +29,20 @@ class Deputado extends Builder
     {  
       $this->app['monolog']->addInfo("\n\n Iniciando a atualizacao de deputados!");  
         
-      $deputadosOnline  = $this->deputadoScrapper->getAll();
+      $info = $this->deputadoScrapper->getMainInfo();
       
-      $this->app['monolog']->addInfo(sprintf("Recuperados %s deputados da página.", count($deputadosOnline)));
+      $this->app['monolog']->addInfo(sprintf("Recuperados %s deputados da página 
+          para a legislatura %s.", count($info['deputados']), 
+              $info['legislatura']));
       
-      $matriculasOnline = $this->getMatriculasFromArray($deputadosOnline);
+      $matriculasOnline = $this->getMatriculasFromArray($info['deputados']);
       
       $deputadosBD      = $this->deputadoRepository->getDeputadosAtuais();
       $matriculasBD     = $this->getMatriculasFromArray($deputadosBD);
       
       $novasMatriculas  = array_diff($matriculasOnline, $matriculasBD);
       
-      $novosDeputados   = $this->getNovosDeputados($deputadosOnline, $novasMatriculas);
+      $novosDeputados   = $this->getNovosDeputados($info['deputados'], $novasMatriculas);
       
       $this->app['monolog']->addInfo(sprintf("Diferenca de %s novos deputados.", count($novosDeputados)));
       
