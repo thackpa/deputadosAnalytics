@@ -40,10 +40,6 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
         $this->builder = new \DA\Builder\Deputado($this->app,$this->scrapperMock,$this->repoMock);
     }
     
-    protected function tearDown() {
-        parent::tearDown();
-    }
-    
     public function testAtualizarListaDeputados()
     {
         $info = array();

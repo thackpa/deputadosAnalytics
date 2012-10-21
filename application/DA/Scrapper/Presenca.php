@@ -2,7 +2,7 @@
 
 namespace DA\Scrapper;
 
-class PresencaSessao extends Scrapper
+class Presenca extends Scrapper
 {
     private $app;
     
