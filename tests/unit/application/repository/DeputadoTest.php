@@ -22,11 +22,6 @@ class DeputadoTest extends \Base\DB
             dirname(__FILE__)."/../../../data/deputados.yml"
         );        
     }
-
-
-    protected function tearDown() {
-        parent::tearDown();
-    }
     
     public function testGetDeputadosAtuais()
     {

@@ -18,8 +18,17 @@ CREATE TABLE IF NOT EXISTS presencasessao (
     data DATE NOT NULL,
     sessao VARCHAR(255) NOT NULL,
     comportamento VARCHAR(255) NOT NULL ,
-    justificativa VARCHAR(255) NOT NULL ,
+    justificativa VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS legislatura (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    numero INT(5) NOT NULL ,
+    atual INT(1) NOT NULL,
+    data DATE NOT NULL
+);
+
+INSERT INTO legislatura VALUES ('', 54, 1, '2012-02-02');
 
 
 #SET SQL_MODE=@OLD_SQL_MODE;

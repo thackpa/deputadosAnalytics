@@ -7,8 +7,9 @@ class Deputado extends Builder
 
     private $deputadoScrapper;
     private $deputadoRepository;
+    private $legislaturaRepository;
     
-    public function __construct($app, $scrapper = null, $repository = null)
+    public function __construct($app, $scrapper = null, $repository = null, $legislaturaRepo = null)
     {
         parent::__construct($app);
         
@@ -23,8 +24,15 @@ class Deputado extends Builder
         } else {
             $this->deputadoRepository   = $repository;
         }
+        
+        if(is_null($legislaturaRepo)) {
+            $this->legislaturaRepository   = new \DA\Repository\Legislatura($app);
+        } else {
+            $this->legislaturaRepository   = $legislaturaRepo;
+        }
     }
     
+    #refatorar - muito grande e 4 responsabilidades
     public function atualizarListaDeputados()
     {  
       $this->app['monolog']->addInfo("\n\n Iniciando a atualizacao de deputados!");  
@@ -34,6 +42,8 @@ class Deputado extends Builder
       $this->app['monolog']->addInfo(sprintf("Recuperados %s deputados da página 
           para a legislatura %s.", count($info['deputados']), 
               $info['legislatura']));
+      
+      $retorno = $this->legislaturaRepository->atualizarLegislaturaAtual($info['legislatura']);
       
       $matriculasOnline = $this->getMatriculasFromArray($info['deputados']);
       
@@ -52,7 +62,7 @@ class Deputado extends Builder
     }
     
     #TODO: Otimizar esse método
-    public function getNovosDeputados(array $deputados, array $matriculas)
+    private function getNovosDeputados(array $deputados, array $matriculas)
     {
         $novos = array();
         foreach ($deputados as $deputado){
@@ -68,7 +78,7 @@ class Deputado extends Builder
     }
 
 
-    public function getMatriculasFromArray(array $deputados)
+    private function getMatriculasFromArray(array $deputados)
     {
         $matriculas = array();
         array_walk($deputados, 
