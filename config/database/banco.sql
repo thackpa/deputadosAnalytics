@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS presencasessao (
     data DATE NOT NULL,
     sessao VARCHAR(255) NOT NULL,
     comportamento VARCHAR(255) NOT NULL ,
-    justificativa VARCHAR(255) NOT NULL ,
+    justificativa VARCHAR(255) NOT NULL
 );
 
 

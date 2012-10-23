@@ -2,6 +2,8 @@
 
 namespace DA\Tests\Scrapper;
 
+include_once(realpath(__DIR__.'/../../../base/Scrapper.php'));
+
 class DeputadoTest extends \Base\Scrapper
 {
     

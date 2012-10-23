@@ -67,7 +67,6 @@ class Deputado extends Builder
         return $novos;
     }
 
-
     public function getMatriculasFromArray(array $deputados)
     {
         $matriculas = array();

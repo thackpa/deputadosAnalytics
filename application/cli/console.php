@@ -15,21 +15,36 @@ use Symfony\Component\Console\Output\OutputInterface;
 $console = new Application('Deputados Analytics', '0.1');
 
 $console->register('atualizar')
-        ->setDefinition(array(
-            new InputOption('deputados', '', InputOption::VALUE_NONE, 'Extracao de Deputados'),
-        ))
+        ->setDefinition(
+                array(
+                  new InputOption('deputados', '', InputOption::VALUE_NONE, 'Extracao de Deputados'),
+                  new InputOption('presencas', '', InputOption::VALUE_NONE, 'Extracao de Presencas')
+                )
+        )
         ->setDescription('Extracao de informacoes')
-        ->setHelp('Uso: <info>./console.php atualizar [--deputados]</info>')
+        ->setHelp('Uso: <info>./console.php atualizar [--deputados|--presencas]</info>')
         ->setCode(
-                function(InputInterface $input, OutputInterface $output) use ($app) {
-                  if ($input->getOption('deputados'))
-                  {
-                    $output->write("\n\tDeputados Retrieving enabled\n\n");
-                  }
+            function(InputInterface $input, OutputInterface $output) use ($app) {
+              if ($input->getOption('deputados')) {
+                $output->write("\n\tRecuperacao de Deputados Iniciada\n\n");
+                
+                $deputadoBuilder = new DA\Builder\Deputado($app);
+                $deputadoBuilder->atualizarListaDeputados();
+                
+                $output->write("\n\tFim da Recuperacao de Deputados \n\n");
+              } else if($input->getOption('presencas')) {
+                $output->write("\n\tRecuperacao de Presenças de Sessão Iniciada\n\n");
+                
+                $mes = 4;
+                
+                $presencasBuilder = new DA\Builder\Presenca($app);
+                $presencasBuilder->atualizarPresencasSessao($mes);
+                
+                $output->write("\n\tFim da Recuperacao de Presenças de Sessão\n\n");
+              }
+            
 
-                  $deputadoBuilder = new DA\Builder\Deputado($app);
-                  $deputadoBuilder->atualizarListaDeputados();
-                }
+            }
 );
 
 $console->run();
