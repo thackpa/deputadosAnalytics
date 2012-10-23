@@ -23,3 +23,9 @@ deputado:
     identificacao: "3458"
     estado: "SP"
     partido: "PHM"
+legislatura:
+  -
+    id: 1
+    numero: 53
+    atual: 1
+    data: "2010-01-01"

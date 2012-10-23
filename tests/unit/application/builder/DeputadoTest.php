@@ -25,6 +25,11 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
      */
     private $repoMock;
     
+    /**
+     * @var \PHPUnit_Framework_MockObject_MockObject 
+     */
+    private $repoLegislaturaMock;
+    
     protected function setUp() {
         parent::setUp();        
         $this->app      = Registry::get("app");
@@ -37,7 +42,11 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
-        $this->builder = new \DA\Builder\Deputado($this->app,$this->scrapperMock,$this->repoMock);
+        $this->repoLegislaturaMock = $this->getMockBuilder('DA\Repository\Legislatura')
+                                        ->setConstructorArgs(array($this->app))
+                                        ->getMock(); 
+        
+        $this->builder = new \DA\Builder\Deputado($this->app,$this->scrapperMock,$this->repoMock,$this->repoLegislaturaMock);
     }
     
     public function testAtualizarListaDeputados()
@@ -81,6 +90,11 @@ class DeputadoTest extends \PHPUnit_Framework_TestCase
                 ->method('inserirNovosDeputados')
                 ->with($deputadosNovos)
                 ->will($this->returnValue(array(1, 1)));
+        
+        $this->repoLegislaturaMock->expects($this->once())
+                ->method('atualizarLegislaturaAtual')
+                ->with($info['legislatura'])
+                ->will($this->returnValue(true));
         
         $this->builder->atualizarListaDeputados();
     }

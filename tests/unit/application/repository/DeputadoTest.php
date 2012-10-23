@@ -23,11 +23,6 @@ class DeputadoTest extends \Base\DB
             realpath(__DIR__."/../../../data/deputados.yml")
         );        
     }
-
-
-    protected function tearDown() {
-        parent::tearDown();
-    }
     
     public function testGetDeputadosAtuais()
     {
