@@ -40,7 +40,5 @@ class LegislaturaTest extends \Base\DB
         $legislaturaExp = array('id' => '1', 'numero' => '53', 'atual' => '1', 'data' => '2010-01-01');
         
         $this->assertSame($legislaturaExp, $legislatura);
-        
-        
     }
 }

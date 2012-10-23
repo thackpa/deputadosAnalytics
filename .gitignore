@@ -3,6 +3,7 @@
 composer.lock
 composer.phar
 .settings/
+log/live.log
 build/
 vendor/monolog/
 vendor/symfony/
