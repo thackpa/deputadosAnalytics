@@ -1,10 +1,10 @@
 <?php
 
-namespace DA\Tests\Builder;
+namespace DA\Tests\Builder\Presenca;
 
 use DA\Util\Registry;
 
-class PresencaTest extends \PHPUnit_Framework_TestCase
+class SessaoTest extends \PHPUnit_Framework_TestCase
 {
     
     private $app;
@@ -39,11 +39,11 @@ class PresencaTest extends \PHPUnit_Framework_TestCase
         parent::setUp();        
         $this->app      = Registry::get("app");
         
-        $this->scrapperMock = $this->getMockBuilder('DA\Scrapper\Presenca')
+        $this->scrapperMock = $this->getMockBuilder('DA\Scrapper\Presenca\Sessao')
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
-        $this->repoMock = $this->getMockBuilder('DA\Repository\PresencaSessao')
+        $this->repoMock = $this->getMockBuilder('DA\Repository\Presenca\Sessao')
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
@@ -55,7 +55,7 @@ class PresencaTest extends \PHPUnit_Framework_TestCase
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
-        $this->builder = new \DA\Builder\Presenca($this->app,$this->scrapperMock,$this->repoMock, $this->repoLegislaturaMock, $this->repoDeputadoMock);
+        $this->builder = new \DA\Builder\Presenca\Sessao($this->app,$this->scrapperMock,$this->repoMock, $this->repoLegislaturaMock, $this->repoDeputadoMock);
     }
     
     public function testAtualizarPresencasSessao()

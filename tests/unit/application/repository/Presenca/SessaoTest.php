@@ -1,10 +1,10 @@
 <?php
 
-namespace DA\Tests\Repository;
+namespace DA\Tests\Repository\Presenca;
 
-use DA\Repository\PresencaSessao, DA\Util\Registry;
+use DA\Repository\Presenca\Sessao, DA\Util\Registry;
 
-class PresencaSessaoTest extends \Base\DB
+class SessaoTest extends \Base\DB
 {
     
     private $repository;
@@ -12,14 +12,14 @@ class PresencaSessaoTest extends \Base\DB
     
     protected function setUp() {
         $this->app = Registry::get("app");
-        $this->repository = new PresencaSessao($this->app);
+        $this->repository = new Sessao($this->app);
         parent::setUp();        
     }
     
     protected function getDataSet()
     {
         return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(
-            dirname(__FILE__)."/../../../data/deputados.yml"
+            dirname(__FILE__)."/../../../../data/deputados.yml"
         );        
     }
     

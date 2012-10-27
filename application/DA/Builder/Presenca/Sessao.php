@@ -1,8 +1,9 @@
 <?php
 
-namespace DA\Builder;
+namespace DA\Builder\Presenca;
+use DA\Builder\Builder;
 
-class Presenca extends Builder
+class Sessao extends Builder
 {
 
     private $presencaScrapper;
@@ -15,13 +16,13 @@ class Presenca extends Builder
         parent::__construct($app);
         
         if(! $scrapper) {
-            $this->presencaScrapper     = new \DA\Scrapper\Presenca($app);
+            $this->presencaScrapper     = new \DA\Scrapper\Presenca\Sessao($app);
         } else {
             $this->presencaScrapper     = $scrapper;
         }
         
         if(!$repository) {
-            $this->presencaSessaoRepository   = new \DA\Repository\PresencaSessao($app);
+            $this->presencaSessaoRepository   = new \DA\Repository\Presenca\Sessao($app);
         } else {
             $this->presencaSessaoRepository   = $repository;
         }

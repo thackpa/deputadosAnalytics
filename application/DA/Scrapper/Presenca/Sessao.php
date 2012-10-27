@@ -1,8 +1,9 @@
 <?php
 
-namespace DA\Scrapper;
+namespace DA\Scrapper\Presenca;
+use DA\Scrapper\Scrapper;
 
-class Presenca extends Scrapper
+class Sessao extends Scrapper
 {
     private $app;
     

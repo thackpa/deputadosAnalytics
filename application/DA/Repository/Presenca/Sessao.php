@@ -1,8 +1,9 @@
 <?php
 
-namespace DA\Repository;
+namespace DA\Repository\Presenca;
+use DA\Repository\Repository;
 
-class PresencaSessao extends Repository
+class Sessao extends Repository
 {
     
     public function __construct($app)

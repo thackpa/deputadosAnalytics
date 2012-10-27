@@ -37,7 +37,7 @@ $console->register('atualizar')
                 
                 $mes = 4;
                 
-                $presencasBuilder = new DA\Builder\Presenca($app);
+                $presencasBuilder = new DA\Builder\Presenca\Sessao($app);
                 $presencasBuilder->atualizarPresencasSessao($mes);
                 
                 $output->write("\n\tFim da Recuperacao de Presenças de Sessão\n\n");

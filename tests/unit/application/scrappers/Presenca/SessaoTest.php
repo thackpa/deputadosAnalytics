@@ -5,7 +5,7 @@ class PresencaSessaoTest extends \Base\Scrapper
 {
     
     protected function setUp() {
-        parent::setUp('DA\Scrapper\Presenca');        
+        parent::setUp('DA\Scrapper\Presenca\Sessao');        
     }
     
     public function testGetPresencas()
