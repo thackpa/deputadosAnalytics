@@ -4,7 +4,7 @@ namespace DA\Tests\Builder\Presenca;
 
 use DA\Util\Registry;
 
-class SessaoTest extends \PHPUnit_Framework_TestCase
+class ComissaoTest extends \PHPUnit_Framework_TestCase
 {
     
     private $app;
@@ -39,11 +39,11 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
         parent::setUp();        
         $this->app      = Registry::get("app");
         
-        $this->scrapperMock = $this->getMockBuilder('DA\Scrapper\Presenca\Sessao')
+        $this->scrapperMock = $this->getMockBuilder('DA\Scrapper\Presenca\Comissao')
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
-        $this->repoMock = $this->getMockBuilder('DA\Repository\Presenca\Sessao')
+        $this->repoMock = $this->getMockBuilder('DA\Repository\Presenca\Comissao')
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
@@ -55,7 +55,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                                 ->setConstructorArgs(array($this->app))
                                 ->getMock(); 
         
-        $this->builder = new \DA\Builder\Presenca\Sessao($this->app,$this->scrapperMock,$this->repoMock, $this->repoLegislaturaMock, $this->repoDeputadoMock);
+        $this->builder = new \DA\Builder\Presenca\Comissao($this->app,$this->scrapperMock,$this->repoMock, $this->repoLegislaturaMock, $this->repoDeputadoMock);
     }
     
     public function testAtualizarPresencas()
@@ -76,7 +76,6 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
             array('id'=> 2, 'matricula' => 2, 'nome' => strtoupper('Jaca Paladium'), 'identificacao' => 2, 'numero' => 2, 'estado' => 'PA', 'partido' => 'PPPPP'),
 //            array('id'=> 3, 'matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan'), 'identificacao' => 3, 'numero' => 3, 'estado' => 'PA', 'partido' => 'PPPPP')
         );
-        
         $this->repoDeputadoMock->expects($this->once())
                 ->method('getDeputadosAtuais')
                 ->will($this->returnValue($deputadosBD));
@@ -86,8 +85,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                                     array(
                                         'deputadoId'    => 1,
                                         'data'          => date('d/m/Y'),
-                                        'justificativa' => 'Compromissos praianos',
-                                        'sessao'        => 'Ordinária 003/02',
+                                        'comissao'        => 'Ordinária 003/02',
                                         'comportamento' => 'Ausência'
                                     )
                                 ),
@@ -95,8 +93,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                                     array(
                                         'deputadoId'    => 2,
                                         'data'          => date('d/m/Y'),
-                                        'justificativa' => 'Compromissos praianos',
-                                        'sessao'        => 'Ordinária 003/02',
+                                        'comissao'        => 'Ordinária 003/02',
                                         'comportamento' => 'Ausência'
                                     )
                                 ),
@@ -104,8 +101,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                                     array(
                                         'deputadoId'    => 3,
                                         'data'          => date('d/m/Y'),
-                                        'justificativa' => 'Compromissos praianos',
-                                        'sessao'        => 'Ordinária 003/02',
+                                        'comissao'        => 'Ordinária 003/02',
                                         'comportamento' => 'Ausência'
                                     )
                                 )

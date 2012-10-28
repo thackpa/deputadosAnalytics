@@ -3,8 +3,9 @@
 namespace DA\Builder\Presenca;
 use DA\Builder\Presenca;
 
-class Sessao extends Presenca
+class Comissao extends Presenca
 {    
+    
     /**
      * Inicializa as principais variaveis para realização da exração e armazenamento no BD
      * @param Silex\Application $app                   
@@ -18,13 +19,13 @@ class Sessao extends Presenca
         parent::__construct($app);
         
         if(! $scrapper) {
-            $this->presencaScrapper     = new \DA\Scrapper\Presenca\Sessao($app);
+            $this->presencaScrapper     = new \DA\Scrapper\Presenca\Comissao($app);
         } else {
             $this->presencaScrapper     = $scrapper;
         }
         
         if(!$repository) {
-            $this->presencaRepository   = new \DA\Repository\Presenca\Sessao($app);
+            $this->presencaRepository   = new \DA\Repository\Presenca\Comissao($app);
         } else {
             $this->presencaRepository   = $repository;
         }
@@ -41,4 +42,5 @@ class Sessao extends Presenca
             $this->deputadoRepository   = $deputadoRepository;
         }
     }
+    
 }

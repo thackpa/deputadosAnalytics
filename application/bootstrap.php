@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Sao_Paulo');
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', __DIR__);
 
 require __DIR__.'/../vendor/autoload.php';

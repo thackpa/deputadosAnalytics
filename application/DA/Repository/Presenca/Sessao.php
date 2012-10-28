@@ -1,24 +1,14 @@
 <?php
 
 namespace DA\Repository\Presenca;
-use DA\Repository\Repository;
+use DA\Repository\Presenca;
 
-class Sessao extends Repository
+class Sessao extends Presenca
 {
-    
-    public function __construct($app)
-    {
-        parent::__construct($app);
-    }
-    
-    public function savePresencas(array $presencas)
-    {
-        $res = array();
-        foreach ($presencas as $presenca) {
-            $res[] = $this->getDb()->insert('presencasessao', $presenca);
-        }
-        
-        return $res;
-    }
-    
+    /**
+     * campo onde serão salvas as presencas na DB
+     * @var string
+     */
+    protected $dbField = 'presencasessao';  
+
 }
