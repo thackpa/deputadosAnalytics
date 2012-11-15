@@ -41,4 +41,41 @@ class Sessao extends Presenca
             $this->deputadoRepository   = $deputadoRepository;
         }
     }
+
+    /**
+     * Extrai e atualiza no banco as Presencas do Plenario
+     * @param  int $mes mes que será feita a extração
+     * @return void      
+     */
+    public function atualizarPresencas($mes = null)
+    { 
+        if(is_null($mes)) {
+            $mes = date("m");
+        }
+        
+        $datas = $this->getDatas4Extracao($mes);
+        
+        $legislatura = $this->legislaturaRepository->getLegislaturaAtual();
+        $deputados = $this->deputadoRepository->getDeputadosAtuais();
+
+        foreach ($deputados as $deputado) {
+            
+            $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para o deputado %s.", $deputado['nome']));
+
+            $urlParams = array(
+                'legislatura'    => $legislatura['numero'], 
+                'last3Matricula' => substr($deputado['matricula'], -3),
+                'dataInicio'     => $datas['dataInicio'], 
+                'dataFim'        => $datas['dataFim'],
+            );
+            
+            $presencas = $this->presencaScrapper->getPresencas($deputado['id'], $urlParams);
+            
+            $this->app['monolog']->addInfo(sprintf("Recuperado %s presencas para o deputado %s.", count($presencas), $deputado['nome']));
+            
+            $retorno = $this->presencaRepository->savePresencas($presencas);
+            
+            $this->app['monolog']->addInfo(sprintf("Salvo %s presencas.", count($retorno)));
+        }       
+    }
 }

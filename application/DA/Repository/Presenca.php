@@ -3,13 +3,13 @@
 namespace DA\Repository;
 use DA\Repository\Repository;
 
-class Presenca extends Repository
+abstract class Presenca extends Repository
 {
     /**
      * campo onde serão salvas as presencas na DB
      * @var string
      */
-    protected $dbField;
+    protected $dbTable;
 
     public function __construct($app)
     {
@@ -17,7 +17,7 @@ class Presenca extends Repository
     }
     
     /**
-     * armazena as Presencas no DB
+     * Armazena as Presencas na DB
      * @param  array  $presencas array de presencas a serem armazenadas
      * @return array            [description]
      */
@@ -25,7 +25,7 @@ class Presenca extends Repository
     {
         $res = array();
         foreach ($presencas as $presenca) {
-            $res[] = $this->getDb()->insert($this->dbField, $presenca);
+            $res[] = $this->getDb()->insert($this->dbTable, $presenca);
         }
         
         return $res;

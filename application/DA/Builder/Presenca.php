@@ -2,12 +2,13 @@
 
 namespace DA\Builder;
 
-class Presenca extends Builder
+abstract class Presenca extends Builder
 {
     protected $presencaScrapper;
     protected $presencaRepository;
     protected $legislaturaRepository;
     protected $deputadoRepository;
+    protected $urlParams;
     
     /**
      * Inicializa as principais variaveis para realização da exração e armazenamento no BD
@@ -40,34 +41,5 @@ class Presenca extends Builder
         
         return array("dataInicio" => "01/$mes/$ano", "dataFim" => "$endDay/$mes/$ano");
     }
-
-    /**
-     * Extrai e atualiza no banco as Presencas
-     * @param  int $mes mes que será feita a extração
-     * @return void      
-     */
-    public function atualizarPresencas($mes = null)
-    { 
-        if(is_null($mes)) {
-            $mes = date("m");
-        }
         
-        $datas = $this->getDatas4Extracao($mes);
-        
-        $legislatura = $this->legislaturaRepository->getLegislaturaAtual();
-        $deputados = $this->deputadoRepository->getDeputadosAtuais();
-        
-        foreach ($deputados as $deputado) {
-            
-            $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para o deputado %s.", $deputado['nome']));
-            
-            $presencas = $this->presencaScrapper->getPresencas($deputado['id'], $legislatura['numero'], substr($deputado['matricula'], -3), $datas['dataInicio'], $datas['dataFim']);
-            
-            $this->app['monolog']->addInfo(sprintf("Recuperado %s presencas para o deputado %s.", count($presencas), $deputado['nome']));
-            
-            $retorno = $this->presencaRepository->savePresencas($presencas);
-            
-            $this->app['monolog']->addInfo(sprintf("Salvo %s presencas.", count($retorno)));
-        }       
-    }    
 }

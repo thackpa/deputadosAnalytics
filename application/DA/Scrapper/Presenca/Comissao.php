@@ -1,24 +1,43 @@
 <?php
 
 namespace DA\Scrapper\Presenca;
-use DA\Scrapper\Scrapper;
+use DA\Scrapper\Presenca;
 
-class Comissao extends Scrapper
-{
-    private $app;
+class Comissao extends Presenca
+{    
     
-    public function __construct($app)
+     /**
+     * Extrai os dados das Presencas em Comissoes
+     * @param  int $deputadoId id do Deputado
+     * @param  array $urlParams  Parametros a serem substituidos na url
+     * 
+     *  $urlParams = array(
+     *    'legislatura'    => Numero da legislatura, 
+     *    'last3Matricula' => Ultimos tres digitos da Matricula,
+     *    'dataInicio'     => Data de Inicio da Extracao, 
+     *    'dataFim'        => Data de Fim da Extracao, 
+     *    'numero'         => Numero do Deputado
+     *  );
+     * 
+     * @return array              dados da Presenca
+     */
+    public function getPresencas($deputadoId, $urlParams=array())
     {
-        $this->app = $app;
-        parent::__construct();
-    }
-    
-    public function getPresencas($deputadoId, $lesgislatura, $last3Matricula, $dataInicio, $dataFim)
-    {
-    
         $url = str_replace(
-                    array('%legislatura%', '%last3Matricula%', '%dataInicio%', '%dataFim%', '%numero%'),
-                    array($lesgislatura, $last3Matricula, $dataInicio, $dataFim, $deputadoId),
+                    array(
+                        '%legislatura%',
+                        '%last3Matricula%',
+                        '%dataInicio%',
+                        '%dataFim%',
+                        '%numero%'
+                    ),
+                    array(
+                        $urlParams['legislatura'],
+                        $urlParams['last3Matricula'],
+                        $urlParams['dataInicio'],
+                        $urlParams['dataFim'],
+                        $urlParams['numero']
+                    ),
                     $this->app['config']['url.presencaComissoes']
                 );
         
@@ -51,7 +70,7 @@ class Comissao extends Scrapper
                 $dates = explode('/', trim(str_replace('Data: ','', $ths->item(0)->nodeValue)));
                 $pres['data'] = $dates[2].'-'.$dates[1].'-'.$dates[0];
             } else if($node->getAttribute('class') == "odd"){
-                $pres['comissao'] = utf8_decode(trim($tds->item(0)->nodeValue));
+                $pres['titulo'] = utf8_decode(trim($tds->item(0)->nodeValue));
                 $pres['tipo']     = utf8_decode(trim($tds->item(1)->nodeValue));
                 $pres['comportamento']  = utf8_decode(trim($tds->item(2)->nodeValue));
                 $dataPresencas[] = $pres;
@@ -61,5 +80,5 @@ class Comissao extends Scrapper
         }
         return $dataPresencas;
     }
-    
+
 }

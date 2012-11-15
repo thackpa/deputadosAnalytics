@@ -21,7 +21,7 @@ class DeputadoTest extends \Base\DB
     {
         return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(
             realpath(__DIR__."/../../../data/deputados.yml")
-        );        
+        );
     }
     
     public function testGetDeputadosAtuais()

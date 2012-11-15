@@ -74,43 +74,55 @@ class ComissaoTest extends \PHPUnit_Framework_TestCase
         $deputadosBD = array(
             array('id'=> 1, 'matricula' => 1, 'nome' => strtoupper('Jaca Rato'), 'identificacao' => 1, 'numero' => 1, 'estado' => 'PA', 'partido' => 'PPPPP'),
             array('id'=> 2, 'matricula' => 2, 'nome' => strtoupper('Jaca Paladium'), 'identificacao' => 2, 'numero' => 2, 'estado' => 'PA', 'partido' => 'PPPPP'),
-//            array('id'=> 3, 'matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan'), 'identificacao' => 3, 'numero' => 3, 'estado' => 'PA', 'partido' => 'PPPPP')
+            //array('id'=> 3, 'matricula' => 3, 'nome' => strtoupper('Jacaré do  É o Tchan'), 'identificacao' => 3, 'numero' => 3, 'estado' => 'PA', 'partido' => 'PPPPP')
         );
         $this->repoDeputadoMock->expects($this->once())
                 ->method('getDeputadosAtuais')
                 ->will($this->returnValue($deputadosBD));
         
         $presencas = array( "1" =>
-                                array(
-                                    array(
-                                        'deputadoId'    => 1,
-                                        'data'          => date('d/m/Y'),
-                                        'comissao'        => 'Ordinária 003/02',
-                                        'comportamento' => 'Ausência'
-                                    )
-                                ),
-                            "2" => array(
-                                    array(
-                                        'deputadoId'    => 2,
-                                        'data'          => date('d/m/Y'),
-                                        'comissao'        => 'Ordinária 003/02',
-                                        'comportamento' => 'Ausência'
-                                    )
-                                ),
-                            "3" => array(
-                                    array(
-                                        'deputadoId'    => 3,
-                                        'data'          => date('d/m/Y'),
-                                        'comissao'        => 'Ordinária 003/02',
-                                        'comportamento' => 'Ausência'
-                                    )
-                                )
-        );
-        
+                        array(
+                            array(
+                                'deputadoId'    => 1,
+                                'data'          => date('d/m/Y'),
+                                'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
+                                'tipo'          => 'Reunião Deliberativa',
+                                'comportamento' => 'Presença'
+                            )
+                        ),
+                        "2" => array(
+                            array(
+                                'deputadoId'    => 2,
+                                'data'          => date('d/m/Y'),
+                                'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
+                                'tipo'          => 'Reunião Deliberativa',
+                                'comportamento' => 'Ausência não justificada'
+                            )
+                        ),
+                         "3" => array(
+                            array(
+                                'deputadoId'    => 3,
+                                'data'          => date('d/m/Y'),
+                                'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
+                                'tipo'          => 'Reunião Deliberativa',
+                                'comportamento' => 'Ausência justificada'
+                            )
+                        )
+                    );
+
         foreach ($deputadosBD as $deputado) {
+
+            $urlParams = array(
+                'legislatura'    => $legislatura['numero'],
+                'last3Matricula' => substr($deputado['matricula'], -3),
+                'dataInicio'     => $dataInicio,
+                'dataFim'        => $dataFim,
+                'numero'         => $deputado['numero']
+            );
+
             $this->scrapperMock->expects($this->at($deputado['id']-1))
                     ->method('getPresencas')
-                    ->with($deputado['id'], $legislatura['numero'], substr($deputado['matricula'], -3), $dataInicio, $dataFim)
+                    ->with($deputado['id'], $urlParams)
                     ->will($this->returnValue($presencas[$deputado['id']]));
             
             $this->repoMock->expects($this->at($deputado['id']-1))

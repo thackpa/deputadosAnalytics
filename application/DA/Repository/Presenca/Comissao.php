@@ -9,6 +9,6 @@ class Comissao extends Presenca
      * campo onde serão salvas as presencas na DB 
      * @var string
      */
-    protected $dbField = 'presencacomissao';
+    protected $dbTable = 'presencacomissao';
          
 }

@@ -1,24 +1,41 @@
 <?php
 
 namespace DA\Scrapper\Presenca;
-use DA\Scrapper\Scrapper;
+use DA\Scrapper\Presenca;
 
-class Sessao extends Scrapper
+class Sessao extends Presenca
 {
-    private $app;
-    
-    public function __construct($app)
-    {
-        $this->app = $app;
-        parent::__construct();
-    }
-    
-    public function getPresencas($deputadoId, $lesgislatura, $last3Matricula, $dataInicio, $dataFim)
+    /**
+     * Extrai os dados das Presencas em Sessoes do Plenario
+     * @param  int $deputadoId id do Deputado
+     * @param  array $urlParams  Parametros a serem substituidos na url
+     * 
+     *  $urlParams = array(
+     *    'legislatura'    => Numero da legislatura, 
+     *    'last3Matricula' => Ultimos tres digitos da Matricula,
+     *    'dataInicio'     => Data de Inicio da Extracao, 
+     *    'dataFim'        => Data de Fim da Extracao, 
+     *    'numero'         => Numero do Deputado
+     *  );
+     * 
+     * @return array              dados da Presenca
+     */
+    public function getPresencas($deputadoId, $urlParams=array())
     {
         $url = str_replace(
-                array('%legislatura%', '%last3Matricula%', '%dataInicio%', '%dataFim%'),
-                array($lesgislatura, $last3Matricula, $dataInicio, $dataFim),
-                $this->app['config']['url.presencaPlenario']
+                    array(
+                        '%legislatura%',
+                        '%last3Matricula%',
+                        '%dataInicio%',
+                        '%dataFim%'
+                    ),
+                    array(
+                        $urlParams['legislatura'],
+                        $urlParams['last3Matricula'],
+                        $urlParams['dataInicio'],
+                        $urlParams['dataFim']
+                    ),
+                    $this->app['config']['url.presencaPlenario']
                 );
         
         $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para a url %s.", $url));
@@ -47,7 +64,7 @@ class Sessao extends Scrapper
                 $pres['data'] = $dates[2].'-'.$dates[1].'-'.$dates[0];
                 $pres['justificativa']  = utf8_decode(trim($tds->item(2)->nodeValue));
             } else {
-                $pres['sessao']         = substr(utf8_decode(trim($tds->item(0)->nodeValue)), 6);
+                $pres['titulo']         = substr(utf8_decode(trim($tds->item(0)->nodeValue)), 6);
                 $comportamento          = utf8_decode(trim($tds->item(1)->nodeValue));
                 $pres['comportamento']  = substr($comportamento,0, strlen($comportamento)-1);
                 
