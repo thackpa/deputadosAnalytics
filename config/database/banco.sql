@@ -9,23 +9,32 @@ CREATE TABLE IF NOT EXISTS deputado (
     identificacao VARCHAR(255) NOT NULL ,
     numero VARCHAR(255) NOT NULL ,
     partido VARCHAR(6) NOT NULL ,
-    estado CHAR(2) NOT NULL
+    estado CHAR(2) NOT NULL   
 );
 
 CREATE TABLE IF NOT EXISTS presencasessao (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     deputadoId INT NOT NULL ,
     data DATE NOT NULL,
-    sessao VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
     comportamento VARCHAR(255) NOT NULL ,
     justificativa VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `presencacomissao` (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  deputadoId int(11) NOT NULL,
+  data date NOT NULL,
+  titulo varchar(255) NOT NULL,
+  tipo varchar(255) NOT NULL,
+  comportamento varchar(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS legislatura (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
     numero INT(5) NOT NULL ,
     atual INT(1) NOT NULL,
-    data DATE NOT NULL
+    data DATE NOT NULL    
 );
 
 INSERT INTO legislatura VALUES ('', 54, 1, '2012-02-02');

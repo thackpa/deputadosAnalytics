@@ -1,8 +1,9 @@
 <?php
 
 namespace DA\Tests\Repository;
-
 use DA\Repository\Deputado, DA\Util\Registry;
+
+include_once(realpath(__DIR__.'/../../../base/DB.php'));
 
 class DeputadoTest extends \Base\DB
 {
@@ -19,8 +20,8 @@ class DeputadoTest extends \Base\DB
     protected function getDataSet()
     {
         return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(
-            dirname(__FILE__)."/../../../data/deputados.yml"
-        );        
+            realpath(__DIR__."/../../../data/deputados.yml")
+        );
     }
     
     public function testGetDeputadosAtuais()
