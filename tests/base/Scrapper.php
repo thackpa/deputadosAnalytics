@@ -4,14 +4,20 @@ namespace Base;
 
 use DA\Util\Registry, Symfony\Component\DomCrawler\Crawler;
 
-abstract class Scrapper extends \PHPUnit_Framework_TestCase
+class Scrapper extends \PHPUnit_Framework_TestCase 
 {
+    
     protected $scrapper;
     protected $app;
     
-    protected function setUp($class) {
+    protected function setUp() 
+    {
         parent::setUp();        
         $this->app = Registry::get("app");
+    }
+    
+    protected function setScrapperMock($class)
+    {
         $this->scrapper = $this->getMockBuilder($class)
                                 ->setConstructorArgs(array($this->app))
                                 ->setMethods(array('request'))

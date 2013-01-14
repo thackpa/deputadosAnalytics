@@ -2,7 +2,7 @@
 
 namespace DA\Tests\Scrapper;
 
-include_once(realpath(__DIR__.'/../../../base/Scrapper.php'));
+include_once(__DIR__.'/../../../base/Scrapper.php');
 
 /**
  * @backupGlobals disabled
@@ -10,12 +10,10 @@ include_once(realpath(__DIR__.'/../../../base/Scrapper.php'));
 class DeputadoTest extends \Base\Scrapper
 {
     
-    protected function setUp() {
-        parent::setUp('DA\Scrapper\Deputado');        
-    }
-    
     public function testGetMainInfo()
     {
+        $this->setScrapperMock('DA\Scrapper\Deputado');   
+        
         $this->setDataFromUrl('url.deputados');
         $data = $this->scrapper->getMainInfo();        
         $deputados = $data['deputados'];
