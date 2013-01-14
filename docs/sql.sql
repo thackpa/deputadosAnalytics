@@ -194,6 +194,15 @@ CREATE  TABLE IF NOT EXISTS `congresso`.`relatoria` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE `congresso`.`presencacomissao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `deputadoId` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
+  `comportamento` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
