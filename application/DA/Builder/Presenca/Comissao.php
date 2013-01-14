@@ -61,7 +61,7 @@ class Comissao extends Presenca
 
         foreach ($deputados as $deputado) {
             
-            $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para o deputado %s.", $deputado['nome']));
+            $this->app['monolog']->info(sprintf("Iniciando a extracao para o deputado %s.", $deputado['nome']));
 
             $urlParams = array(
                 'legislatura'    => $legislatura['numero'], 
@@ -73,11 +73,11 @@ class Comissao extends Presenca
             
             $presencas = $this->presencaScrapper->getPresencas($deputado['id'], $urlParams);
             
-            $this->app['monolog']->addInfo(sprintf("Recuperado %s presencas para o deputado %s.", count($presencas), $deputado['nome']));
+            $this->app['monolog']->info(sprintf("Recuperado %s presencas para o deputado %s.", count($presencas), $deputado['nome']));
             
             $retorno = $this->presencaRepository->savePresencas($presencas);
             
-            $this->app['monolog']->addInfo(sprintf("Salvo %s presencas.", count($retorno)));
+            $this->app['monolog']->info(sprintf("Salvo %s presencas.", count($retorno)));
         }       
     }        
 }
