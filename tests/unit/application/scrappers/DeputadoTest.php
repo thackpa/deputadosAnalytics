@@ -4,6 +4,9 @@ namespace DA\Tests\Scrapper;
 
 include_once(realpath(__DIR__.'/../../../base/Scrapper.php'));
 
+/**
+ * @backupGlobals disabled
+ */
 class DeputadoTest extends \Base\Scrapper
 {
     

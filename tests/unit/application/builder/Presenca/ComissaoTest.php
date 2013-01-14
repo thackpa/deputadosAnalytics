@@ -4,6 +4,9 @@ namespace DA\Tests\Builder\Presenca;
 
 use DA\Util\Registry;
 
+/**
+ * @backupGlobals disabled
+ */
 class ComissaoTest extends \PHPUnit_Framework_TestCase
 {
     

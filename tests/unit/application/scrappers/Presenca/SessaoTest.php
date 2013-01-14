@@ -1,6 +1,9 @@
 <?php
 namespace DA\Tests\Scrapper;
 
+/**
+ * @backupGlobals disabled
+ */
 class PresencaSessaoTest extends \Base\Scrapper
 {
     

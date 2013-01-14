@@ -4,6 +4,9 @@ namespace DA\Tests\Repository\Presenca;
 
 use DA\Repository\Presenca\Comissao, DA\Util\Registry;
 
+/**
+ * @backupGlobals disabled
+ */
 class ComissaoTest extends \Base\DB
 {
     
@@ -29,22 +32,19 @@ class ComissaoTest extends \Base\DB
                         array(
                             'deputadoId'    => 1,
                             'data'          => date('Y-m-d'),
-                            'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
                             'deputadoId'    => 2,
                             'data'          => date('Y-m-d'),
-                            'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
                             'deputadoId'    => 3,
                             'data'          => date('Y-m-d'),
-                            'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         )
         );

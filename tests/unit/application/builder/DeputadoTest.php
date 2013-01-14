@@ -4,6 +4,9 @@ namespace DA\Tests\Builder;
 
 use DA\Util\Registry;
 
+/**
+ * @backupGlobals disabled
+ */
 class DeputadoTest extends \PHPUnit_Framework_TestCase
 {
     

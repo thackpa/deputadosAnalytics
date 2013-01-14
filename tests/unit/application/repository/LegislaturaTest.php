@@ -4,6 +4,9 @@ namespace DA\Tests\Repository;
 
 use DA\Repository\Legislatura, DA\Util\Registry;
 
+/**
+ * @backupGlobals disabled
+ */
 class LegislaturaTest extends \Base\DB
 {
     

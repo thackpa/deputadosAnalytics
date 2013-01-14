@@ -4,6 +4,9 @@ namespace DA\Tests\Repository\Presenca;
 
 use DA\Repository\Presenca\Sessao, DA\Util\Registry;
 
+/**
+ * @backupGlobals disabled
+ */
 class SessaoTest extends \Base\DB
 {
     
@@ -30,21 +33,21 @@ class SessaoTest extends \Base\DB
                             'deputadoId'    => 1,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
                             'deputadoId'    => 2,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
                             'deputadoId'    => 3,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
-                            'sessao'        => 'Ordinária 003/02',
+                            'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         )
         );

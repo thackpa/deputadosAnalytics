@@ -5,6 +5,9 @@ use DA\Repository\Deputado, DA\Util\Registry;
 
 include_once(realpath(__DIR__.'/../../../base/DB.php'));
 
+/**
+ * @backupGlobals disabled
+ */
 class DeputadoTest extends \Base\DB
 {
     

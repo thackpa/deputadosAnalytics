@@ -16,5 +16,6 @@ vendor/composer/
 vendor/fabpot/
 vendor/guzzle/
 vendor/.composer/
+vendor/psr/
 nbproject/
 *.log
