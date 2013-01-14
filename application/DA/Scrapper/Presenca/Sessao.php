@@ -38,7 +38,7 @@ class Sessao extends Presenca
                     $this->app['config']['url.presencaPlenario']
                 );
         
-        $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para a url %s.", $url));
+        $this->app['monolog']->info(sprintf("Iniciando a extracao para a url %s.", $url));
         
         $crawler = $this->request($url);
         
@@ -49,7 +49,7 @@ class Sessao extends Presenca
         }
         
         if(count($presencas) == 0) {
-            $this->app['monolog']->addInfo(sprintf("Nenhuma informacao encontrada %s.", $url));
+            $this->app['monolog']->info(sprintf("Nenhuma informacao encontrada %s.", $url));
             return array();
         }
         

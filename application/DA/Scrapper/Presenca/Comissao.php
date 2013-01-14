@@ -41,7 +41,7 @@ class Comissao extends Presenca
                     $this->app['config']['url.presencaComissoes']
                 );
         
-        $this->app['monolog']->addInfo(sprintf("Iniciando a extracao para a url %s.", $url));
+        $this->app['monolog']->info(sprintf("Iniciando a extracao para a url %s.", $url));
         
         $crawler = $this->request($url);
         
@@ -52,7 +52,7 @@ class Comissao extends Presenca
         }    
 
         if(count($presencas) == 0) {
-            $this->app['monolog']->addInfo(sprintf("Nenhuma informacao encontrada %s.", $url));
+            $this->app['monolog']->info(sprintf("Nenhuma informacao encontrada %s.", $url));
             return array();
         }
 
@@ -76,7 +76,7 @@ class Comissao extends Presenca
                 $dataPresencas[] = $pres;
             }
             
-            $this->app['monolog']->addInfo(print_r($pres, true));
+            $this->app['monolog']->info(print_r($pres, true));
         }
         return $dataPresencas;
     }

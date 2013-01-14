@@ -20,9 +20,12 @@ array_walk($config, function($val,$key) use (&$config2) {
 $app['config'] = $config2[APPLICATION_ENV];
 //End to change to pimple
 
-
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile' => __DIR__.'/../log/live.log',
-));
+if(APPLICATION_ENV != 'automatedtests') {
+    $app->register(new Silex\Provider\MonologServiceProvider(), array(
+        'monolog.logfile' => __DIR__.'/../log/live.log',
+    ));
+} else {
+    $app['monolog'] = new \Symfony\Component\HttpKernel\Log\NullLogger();
+}
 
 return $app;
