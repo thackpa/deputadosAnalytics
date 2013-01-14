@@ -7,12 +7,10 @@ namespace DA\Tests\Scrapper;
 class PresencaSessaoTest extends \Base\Scrapper
 {
     
-    protected function setUp() {
-        parent::setUp('DA\Scrapper\Presenca\Sessao');        
-    }
-    
     public function testGetPresencas()
     {
+        $this->setScrapperMock('DA\Scrapper\Presenca\Sessao');   
+        
         $this->setDataFromUrl('url.presencaPlenario');
         
         $urlParams = array(
