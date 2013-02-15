@@ -35,22 +35,21 @@ class Atualizar extends Command
                InputOption::VALUE_REQUIRED,
                'Extracao de Presencas'
             )
-            ->setHelp('Uso: <info>./console.php atualizar [--deputados|--presencas=comissao|sessao]</info>')
-            
-        ;
+            ->setHelp("Uso: <info>console.php atualizar [--deputados|--presencas=comissao|sessao]</info>\n");
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {                
-        if ($input->getOption('deputados')) {
+        if  ( $input->getOption('deputados') ) {
 
             $output->write("\n\tRecuperacao de Deputados Iniciada\n\n");
             $deputadoBuilder = new \DA\Builder\Deputado($this->app);
             $deputadoBuilder->atualizarListaDeputados();
 
-        }else if($input->getOption('presencas')) {
+        } else if ( $input->getOption('presencas' ) )  {
 
-            switch ($input->getOption('presencas')) {
+            switch ( $input->getOption('presencas' ) ) 
+            {
                 case 'sessao':
                     $output->write("\n\tRecuperacao de Presenças de Sessão Iniciada\n\n");            
                     $mes = 4;            
@@ -69,7 +68,8 @@ class Atualizar extends Command
                     $output->write("\n\tOpção invalida. Tente --presencas=[sessao|comissao] \n\n");
                     break;
             }            
-
+        }else{
+                $output->write($this->getHelp());
         }
     }
 }
