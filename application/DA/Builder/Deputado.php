@@ -35,11 +35,11 @@ class Deputado extends Builder
     #refatorar - muito grande e 4 responsabilidades
     public function atualizarListaDeputados()
     {  
-      $this->app['monolog']->addInfo("\n\n Iniciando a atualizacao de deputados!");  
+      $this->app['monolog']->info("\n\n Iniciando a atualizacao de deputados!");  
         
       $info = $this->deputadoScrapper->getMainInfo();
       
-      $this->app['monolog']->addInfo(sprintf("Recuperados %s deputados da página 
+      $this->app['monolog']->info(sprintf("Recuperados %s deputados da página 
           para a legislatura %s.", count($info['deputados']), 
               $info['legislatura']));
       
@@ -54,11 +54,11 @@ class Deputado extends Builder
       
       $novosDeputados   = $this->getNovosDeputados($info['deputados'], $novasMatriculas);
       
-      $this->app['monolog']->addInfo(sprintf("Diferenca de %s novos deputados.", count($novosDeputados)));
+      $this->app['monolog']->info(sprintf("Diferenca de %s novos deputados.", count($novosDeputados)));
       
       $retorno = $this->deputadoRepository->inserirNovosDeputados($novosDeputados);
       
-      $this->app['monolog']->addInfo(sprintf("Inseridos %s novos deputados.", count($retorno)));
+      $this->app['monolog']->info(sprintf("Inseridos %s novos deputados.", count($retorno)));
     }
     
     #TODO: Otimizar esse método
