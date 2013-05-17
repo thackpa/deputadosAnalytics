@@ -37,7 +37,7 @@ class Deputado extends Scrapper
         $deps = $crawler->filter('#deputado > option')->each(function ($node, $i){
             $dep = array();
             if($i != 0) {
-                $dados              = explode('|', $node->getAttribute('value'));
+                $dados              = explode('|', $node->attr('value'));
                 $dep['nome']   = utf8_decode($dados[0]);
                 $dados              = explode('%', $dados[1]);
                 $dep['numero'] = $dados[0];
