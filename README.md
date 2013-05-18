@@ -11,7 +11,7 @@ Passos pra rodar
 $ php composer.phar install
 ```
 
-**3.** Edite o arquivo ***config/config.ini*** com as credenciais de acesso aos banco. Não se esqueça de configurar diferentes databases para os ambientes  *dev* e *automatedtests*
+**3.** Edite o arquivo ***config/config.ini*** com as credenciais de acesso ao banco. Não se esqueça de configurar diferentes databases para os ambientes  *dev* e *automatedtests*
 	
 	
 **4.** Execute as migrations com os comandos:
