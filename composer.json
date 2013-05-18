@@ -1,17 +1,19 @@
 {
     "autoload": {
         "psr-0": {
-        "DA": "application/",
-        "Base": "tests/"
+            "DA": "application/",
+            "Base": "tests/",
+            "Migrations": "application/migrations/"
         }
     },
-    "require": {
-        "monolog/monolog": "1.4.x",
-    	"silex/silex" : "1.0.*",
-        "symfony/console" : "2.0.7",
-        "doctrine/dbal" : "2.2.*",
-        "doctrine/migrations" : "dev-master",
-    	"fabpot/goutte": "1.0.x-dev"
-    },
+        "require": {
+            "monolog/monolog": "1.4.x",
+            "silex/silex" : "1.0.*",
+            "symfony/console" : "2.0.7",
+            "symfony/yaml" : "2.4.x",
+            "doctrine/dbal" : "2.2.*",
+            "doctrine/migrations" : "dev-master",
+            "fabpot/goutte": "1.0.x"
+        },
     "minimum-stability": "dev"
 }   
