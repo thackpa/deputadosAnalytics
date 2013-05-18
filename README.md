@@ -3,18 +3,34 @@ Deputados Analytics [![Build Status](https://secure.travis-ci.org/thackpa/deputa
 
 Passos pra rodar
 -----------
-1. Baixe o Composer: [http://getcomposer.org/](http://getcomposer.org/)
-2. Baixe as dependencias: 
-   `$ php composer.phar install`
-5. Edite o arquivo `config/config.ini` com as credenciais de acesso aos banco
-    5.1 Configure dois bancos diferentes para os ambientes  `dev` e `automatedtests`
-6. Execute as migrations com os comandos:
-`$ ./tests/cli/console.php --configuration=migrations.yml migrations:migrate`
-`$ ./application/cli/console.php --configuration=migrations.yml migrations:migrate`
-6. Rode os testes: 
-`$ phpunit --configuration phpunit.xml`
-7. Rodar o spider 
-`$ application/cli/console.php atualizar`
+**1.** Baixe o Composer: [http://getcomposer.org/](http://getcomposer.org/)
+
+**2.** Instale as dependencias:
+
+```
+$ php composer.phar install
+```
+
+**3.** Edite o arquivo ***config/config.ini*** com as credenciais de acesso aos banco. Não se esqueça de configurar diferentes databases para os ambientes  *dev* e *automatedtests*
+	
+	
+**4.** Execute as migrations com os comandos:
+```
+$ ./application/cli/console.php --configuration=migrations.yml migrations:migrate
+```
+```
+$ ./tests/cli/console.php --configuration=migrations.yml migrations:migrate
+```
+
+***5.*** Rode os testes para ver se está tudo configurado corretamente: 
+```
+$ phpunit --configuration phpunit.xml
+```
+
+***6.*** Rodar o spider para atualizar os dados do ambiente *dev*
+```
+$ application/cli/console.php atualizar
+```
 
 Informações
 -----------
