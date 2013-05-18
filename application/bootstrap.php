@@ -4,7 +4,6 @@ defined('APPLICATION_PATH') || define('APPLICATION_PATH', __DIR__);
 
 require __DIR__.'/../vendor/autoload.php';
 
-
 $app = new Silex\Application();
 $config = new DA\Util\Config( APPLICATION_PATH."/../config/config.ini" );
 

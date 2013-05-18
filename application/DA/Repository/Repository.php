@@ -39,7 +39,7 @@ class Repository
      * 
      * @return \Doctrine\DBAL\Connection
      */
-    public function getDb()
+    protected function getDb()
     {
         return $this->db;
     }

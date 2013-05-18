@@ -1,7 +1,5 @@
 #!/usr/bin/env php
 <?php
-defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'dev'));
-
 $app = require __DIR__ . '/../bootstrap.php';
 
 use Symfony\Component\Console\Input\InputInterface;
@@ -13,10 +11,9 @@ use DA\Console\Application;
 use DA\Console\Command\Atualizar;
 use DA\Repository\Repository;
 
-$application = new Application('Deputados Analytics', '0.1');
+$application = new Application('Test Migrations Deputado Analytics', '0.1');
 $application->setup($app);
 
-$application->add(new Atualizar($app));
 $application->addCommands(array(
 	new \Doctrine\DBAL\Migrations\Tools\Console\Command\DiffCommand(),
 	new \Doctrine\DBAL\Migrations\Tools\Console\Command\ExecuteCommand(),

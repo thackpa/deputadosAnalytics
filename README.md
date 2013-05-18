@@ -3,13 +3,18 @@ Deputados Analytics [![Build Status](https://secure.travis-ci.org/thackpa/deputa
 
 Passos pra rodar
 -----------
-1. Baixar o Composer: [http://getcomposer.org/](http://getcomposer.org/)
-2. Executa-lo: `php composer.phar install`
-3. Criar os bancos de dados - deputadosanalytics / deputadosanalytics_test
-apartir do script config/database/banco.sql
-5. Condigurar o arquivo config/config.ini com as credenciais de acesso ao banco
-6. Rodar testes: `phpunit --configuration phpunit.xml`
-7. Rodar o spider - `application/cli/console.php atualizar`
+1. Baixe o Composer: [http://getcomposer.org/](http://getcomposer.org/)
+2. Baixe as dependencias: 
+   `$ php composer.phar install`
+5. Edite o arquivo `config/config.ini` com as credenciais de acesso aos banco
+    5.1 Configure dois bancos diferentes para os ambientes  `dev` e `automatedtests`
+6. Execute as migrations com os comandos:
+`$ ./tests/cli/console.php --configuration=migrations.yml migrations:migrate`
+`$ ./application/cli/console.php --configuration=migrations.yml migrations:migrate`
+6. Rode os testes: 
+`$ phpunit --configuration phpunit.xml`
+7. Rodar o spider 
+`$ application/cli/console.php atualizar`
 
 Informações
 -----------
