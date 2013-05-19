@@ -3,7 +3,7 @@ Deputados Analytics [![Build Status](https://secure.travis-ci.org/thackpa/deputa
 
 Passos pra rodar
 -----------
-**1.** Baixe o Composer: [http://getcomposer.org/](http://getcomposer.org/)
+**1.** Baixe o [Composer](http://getcomposer.org/):
 
 **2.** Instale as dependencias:
 
