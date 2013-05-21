@@ -7,9 +7,11 @@ $app = require __DIR__ . '/../application/bootstrap.php';
 DA\Util\Registry::set("app", $app);
 
 
+return $app;
 
-//
-//Create a simple migration system
+
+
+/*//Create a simple migration system
 $connectionParams = array(
     'dbname' => $app['config']['bd.name'],
     'user' => $app['config']['bd.user'],
@@ -23,3 +25,4 @@ $conn = Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 $sql = file_get_contents(__DIR__."/../config/database/banco.sql");
 
 $stmt = $conn->query($sql);
+*/
