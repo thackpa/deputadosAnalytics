@@ -15,4 +15,4 @@ before_script:
   - "phpenv rehash"
   - "wget http://getcomposer.org/composer.phar"
   - "php composer.phar install"
-  - "./tests/cli/console.php --configuration=migrations.yml migrations:migrate"
+  - "./tests/cli/console.php << EOF\nY EOF"
