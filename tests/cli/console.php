@@ -1,5 +1,15 @@
 #!/usr/bin/env php
 <?php
+
+/**
+ * This file is part of the Deputado Analytics System (http://deputadoanalytics.com.br/)
+ *
+ * @link https://github.com/thackpa/deputadosAnalytics for the canonical source repository 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ */
+
 $app = require __DIR__ . '/../bootstrap.php';
 
 use Symfony\Component\Console\Input\InputInterface;
@@ -23,4 +33,12 @@ $application->addCommands(array(
 	new \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand()
 	));
 
-$application->run();
+$input = new Symfony\Component\Console\Input\ArrayInput(
+    array(
+        'migrations:migrate',
+        '--configuration='.  APPLICATION_PATH . '/migrations.yml'
+    )
+);
+
+$input->setInteractive(false);
+$application->run($input);
