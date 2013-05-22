@@ -12,6 +12,7 @@ before_script:
   - mysql -e 'create database deputadosanalytics_test;'
   - "pear channel-discover pear.phpunit.de"
   - "pear install phpunit/DbUnit"
+  - "./tests/cli/console.php --configuration=migrations.yml migrations:migrate"
   - "phpenv rehash"
   - "wget http://getcomposer.org/composer.phar"
   - "php composer.phar install"
