@@ -8,4 +8,3 @@ log/live.log
 build/
 vendor/*
 nbproject/
-*.log

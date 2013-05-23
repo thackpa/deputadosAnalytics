@@ -1,24 +1,51 @@
 <?php
 
+/**
+ * Deputado Analytics (http://deputadoanalytics.com.br/)
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @link      https://github.com/thackpa/deputadosAnalytics
+ *
+ */
+
 namespace DA\Repository;
 
-
+/**
+ * Classe base para todos Repository
+ *
+ * @package Repository
+ */
 class Repository
 {
-    
-    private $app;
+
     /**
-     *
-     * @var \Doctrine\DBAL\Connection 
+     * Objeto da Aplicação
+     * @var \Silex\Application
+     */
+    private $app;
+
+    /**
+     * Armazena a conexão com o banco
+     * @var \Doctrine\DBAL\Connection
      */
     private $db;
-    
-    public function __construct($app)
+
+    /**
+     * Construtor Repository
+     * @param \Silex\Application $app
+     */
+    public function __construct(\Silex\Application $app)
     {
         $this->app = $app;
         $this->connect();
     }
-    
+
+    /**
+     * Inicializa a conexão com o Banco
+     * @return void
+     */
     protected function connect()
     {
         $this->app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
@@ -34,14 +61,14 @@ class Repository
         ));
         $this->db = $this->app['db'];
     }
-    
+
     /**
-     * 
+     * Retorna a conexão
      * @return \Doctrine\DBAL\Connection
      */
     protected function getDb()
     {
         return $this->db;
     }
-    
+
 }
