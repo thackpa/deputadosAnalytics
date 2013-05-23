@@ -2,8 +2,7 @@
     "autoload": {
         "psr-0": {
             "DA": "application/",
-            "Base": "tests/",
-            "Migrations": "application/migrations/"
+            "Tests": "tests/"            
         }
     },
         "require": {
