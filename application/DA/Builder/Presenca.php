@@ -47,7 +47,7 @@ abstract class Presenca extends Builder
 
     /**
      * Array com Parametros da URL
-     * @var string
+     * @var array
      */
     protected $urlParams;
 

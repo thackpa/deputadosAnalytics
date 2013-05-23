@@ -1,0 +1,798 @@
+[2013-05-23 01:39:43] myapp.INFO: 
+
+ Iniciando a atualizacao de deputados! [] []
+[2013-05-23 01:39:43] myapp.INFO: Recuperados 8 deputados da página
+          para a legislatura 54. [] []
+[2013-05-23 01:39:43] myapp.INFO: Diferenca de 2 novos deputados. [] []
+[2013-05-23 01:39:43] myapp.INFO: Inseridos 2 novos deputados. [] []
+[2013-05-23 01:39:43] myapp.INFO: Iniciando a extracao para o deputado JACA RATO. [] []
+[2013-05-23 01:39:43] myapp.INFO: Recuperado 1 presencas para o deputado JACA RATO. [] []
+[2013-05-23 01:39:43] myapp.INFO: Salvo 1 presencas. [] []
+[2013-05-23 01:39:43] myapp.INFO: Iniciando a extracao para o deputado JACA PALADIUM. [] []
+[2013-05-23 01:39:43] myapp.INFO: Recuperado 1 presencas para o deputado JACA PALADIUM. [] []
+[2013-05-23 01:39:43] myapp.INFO: Salvo 1 presencas. [] []
+[2013-05-23 01:39:43] myapp.INFO: Iniciando a extracao para o deputado JACA RATO. [] []
+[2013-05-23 01:39:43] myapp.INFO: Recuperado 1 presencas para o deputado JACA RATO. [] []
+[2013-05-23 01:39:43] myapp.INFO: Salvo 1 presencas. [] []
+[2013-05-23 01:39:43] myapp.INFO: Iniciando a extracao para o deputado JACA PALADIUM. [] []
+[2013-05-23 01:39:43] myapp.INFO: Recuperado 1 presencas para o deputado JACA PALADIUM. [] []
+[2013-05-23 01:39:43] myapp.INFO: Salvo 1 presencas. [] []
+[2013-05-23 01:39:45] myapp.INFO: Iniciando a extracao para a url RelPresencaComissoes.html. [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-02
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-02
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-02
+    [titulo] => Não membro - CTD - TURISMO E DESPORTO
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-02
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-16
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-16
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-16
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-23
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-23
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-23
+    [titulo] => Suplente - COETICA - RES 025/01 - CONSELHO DE ÉTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-03-23
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-13
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-13
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-13
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-27
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-27
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-27
+    [titulo] => Suplente - COETICA - RES 025/01 - CONSELHO DE ÉTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-04-27
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-04
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-04
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-04
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-11
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-11
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-11
+    [titulo] => Suplente - COETICA - RES 025/01 - CONSELHO DE ÉTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-11
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-19
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-19
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-19
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-25
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-25
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-05-25
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-01
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-01
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-01
+    [titulo] => Suplente - COETICA - RES 025/01 - CONSELHO DE ÉTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-01
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-08
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-08
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-08
+    [titulo] => Suplente - COETICA - RES 025/01 - CONSELHO DE ÉTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-08
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-14
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-14
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-14
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-15
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-15
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-06-15
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-05
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-05
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-05
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2011-07-06
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-07
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-07
+    [titulo] => Titular - CVT - VIAÇÃO E TRANSPORTES
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-07
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-07
+    [titulo] => Suplente - CDU - DESENVOLVIMENTO URBANO
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-14
+    [titulo] => Suplente - CDU - DESENVOLVIMENTO URBANO
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-14
+    [titulo] => Suplente - CDU - DESENVOLVIMENTO URBANO
+    [tipo] => Reunião de Instalação e Eleição
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-14
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-20
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-20
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-20
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-21
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-21
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Audiência Pública
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-21
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-28
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-28
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-03-28
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-11
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-11
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência Justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-11
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-18
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-18
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-04-18
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-09
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-09
+    [titulo] => Titular - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Ausência não justificada
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-09
+    [titulo] => Não membro - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - CCTCI - CIÊNCIA E TECNOLOGIA, COMUNICAÇÃO E INFORMÁTICA
+    [tipo] => Reunião Deliberativa
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Array
+(
+    [deputadoId] => 54
+    [data] => 2012-05-16
+    [titulo] => Não membro - PEC00511 - PEC 005/11 - SUBSÍDIOS CARGOS PÚBLICOS
+    [tipo] => Reunião de Instalação
+    [comportamento] => Presença
+)
+ [] []
+[2013-05-23 01:39:45] myapp.INFO: Iniciando a extracao para a url RelPresencaPlenario.html. [] []

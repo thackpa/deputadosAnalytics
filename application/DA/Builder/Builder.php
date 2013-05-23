@@ -13,11 +13,10 @@
 namespace DA\Builder;
 
 /**
- *
  * Classe base para construção dos Builders
+ *
  * @package Builder
  */
-
 class Builder
 {
 

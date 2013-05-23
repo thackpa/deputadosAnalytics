@@ -13,14 +13,15 @@
 namespace DA\Console;
 
 /**
- * Uma Aplicação Console
+ * Aplicação Console Container
+ *
  * @package Console
  */
 class Application extends \Symfony\Component\Console\Application
 {
     /**
      * Objeto da Aplicação
-     * @var Silex\Application
+     * @var \Silex\Application
      */
     private $app;
 

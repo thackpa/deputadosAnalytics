@@ -14,6 +14,7 @@ namespace DA\Repository;
 
 /**
  * Classe responsável por persistir os dados de Deputados
+ *
  * @package Repository
  */
 class Deputado extends Repository

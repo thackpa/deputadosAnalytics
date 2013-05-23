@@ -14,9 +14,8 @@ namespace DA\Repository;
 use DA\Repository\Repository;
 
 /**
- * Classe Abstrata responsavel por servir de Base
- * para o armazenamento das Presencas em Reuniões de Comissão
- * e Sesões do Plenario
+ * Classe Abstrata responsavel por servir de Base para o
+ * armazenamento das Presencas em Reuniões de Comissão e Sesões do Plenario
  *
  * @package       Repository
  * @subpackage Presenca
@@ -32,6 +31,7 @@ abstract class Presenca extends Repository
     /**
      * Armazena as Presencas na DB
      * @param  array $presencas array de presencas a serem armazenadas
+     *
      * @return  array [description]
      */
     public function savePresencas(array $presencas)

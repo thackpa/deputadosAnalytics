@@ -14,6 +14,7 @@ namespace DA\Repository;
 
 /**
  * Classe base para todos Repository
+ *
  * @package Repository
  */
 class Repository

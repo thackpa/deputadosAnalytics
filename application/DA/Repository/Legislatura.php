@@ -14,6 +14,7 @@ namespace DA\Repository;
 
 /**
  * Classe responsável por persistir os dados de Legislaturas
+ *
  * @package Repository
  */
 class Legislatura extends Repository
