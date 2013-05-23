@@ -86,7 +86,7 @@ class ComissaoTest extends \PHPUnit_Framework_TestCase
         $presencas = array( "1" =>
                         array(
                             array(
-                                'deputadoId'    => 1,
+                                'deputado_id'    => 1,
                                 'data'          => date('d/m/Y'),
                                 'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
                                 'tipo'          => 'Reunião Deliberativa',
@@ -95,7 +95,7 @@ class ComissaoTest extends \PHPUnit_Framework_TestCase
                         ),
                         "2" => array(
                             array(
-                                'deputadoId'    => 2,
+                                'deputado_id'    => 2,
                                 'data'          => date('d/m/Y'),
                                 'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
                                 'tipo'          => 'Reunião Deliberativa',
@@ -104,7 +104,7 @@ class ComissaoTest extends \PHPUnit_Framework_TestCase
                         ),
                          "3" => array(
                             array(
-                                'deputadoId'    => 3,
+                                'deputado_id'    => 3,
                                 'data'          => date('d/m/Y'),
                                 'titulo'        => 'Titular - CCTCI - CIÃŠNCIA E TECNOLOGIA',
                                 'tipo'          => 'Reunião Deliberativa',

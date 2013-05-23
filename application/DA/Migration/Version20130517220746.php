@@ -22,12 +22,6 @@ use Doctrine\DBAL\Migrations\AbstractMigration,
 class Version20130517220746 extends AbstractMigration
 {
 
-    /**
-     * up
-     * @param  Schema $schema
-     *
-     * @return void
-     */
     public function up(Schema $schema)
     {
         $this->addSql('CREATE TABLE IF NOT EXISTS `presencacomissao` (
@@ -40,12 +34,6 @@ class Version20130517220746 extends AbstractMigration
                     ) ENGINE = InnoDB' );
     }
 
-    /**
-     * down
-     *
-     * @param  Schema $schema
-     * @return void
-     */
     public function down(Schema $schema)
     {
         $schema->dropTable('presencacomissao');

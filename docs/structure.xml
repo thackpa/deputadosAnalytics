@@ -1,285 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a12" title="Deputado Analytics">
-  <file path="DA/Migration/Version20130517220746.php" hash="df4db736cb4c6d80321e778733d3982e" package="Default">
-    <docblock line="3">
-      <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
-      <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.&lt;/p&gt;</long-description>
-      <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="DA\Migration" line="22" package="Migration">
-      <extends>\Doctrine\DBAL\Migrations\AbstractMigration</extends>
-      <name>Version20130517220746</name>
-      <full_name>\DA\Migration\Version20130517220746</full_name>
-      <docblock line="18">
-        <description>Criação da tabela em presença em Comissões</description>
-        <long-description/>
-        <tag line="18" name="package" description="Migration"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="31" package="Migration">
-        <name>up</name>
-        <full_name>up</full_name>
-        <docblock line="25">
-          <description>up</description>
-          <long-description/>
-          <tag line="25" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="25" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="31">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="49" package="Migration">
-        <name>down</name>
-        <full_name>down</full_name>
-        <docblock line="43">
-          <description>down</description>
-          <long-description/>
-          <tag line="43" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="43" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="49">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="DA/Migration/Version20130517195435.php" hash="eb36872e07408502af897d9bcf89cf92" package="Default">
-    <docblock line="3">
-      <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
-      <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.&lt;/p&gt;</long-description>
-      <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="DA\Migration" line="22" package="Migration">
-      <extends>\Doctrine\DBAL\Migrations\AbstractMigration</extends>
-      <name>Version20130517195435</name>
-      <full_name>\DA\Migration\Version20130517195435</full_name>
-      <docblock line="18">
-        <description>Criação da tabela de Deputado</description>
-        <long-description/>
-        <tag line="18" name="package" description="Migration"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="30" package="Migration">
-        <name>up</name>
-        <full_name>up</full_name>
-        <docblock line="24">
-          <description>up</description>
-          <long-description/>
-          <tag line="24" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="24" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="30">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="49" package="Migration">
-        <name>down</name>
-        <full_name>down</full_name>
-        <docblock line="43">
-          <description>down</description>
-          <long-description/>
-          <tag line="43" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="43" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="49">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="DA/Migration/Version20130517221811.php" hash="b1ce409d725f1ff0ba565cc6232b4b16" package="Default">
-    <docblock line="3">
-      <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
-      <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.&lt;/p&gt;</long-description>
-      <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="DA\Migration" line="22" package="Migration">
-      <extends>\Doctrine\DBAL\Migrations\AbstractMigration</extends>
-      <name>Version20130517221811</name>
-      <full_name>\DA\Migration\Version20130517221811</full_name>
-      <docblock line="18">
-        <description>Criação da tabela de Legislatura</description>
-        <long-description/>
-        <tag line="18" name="package" description="Migration"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="31" package="Migration">
-        <name>up</name>
-        <full_name>up</full_name>
-        <docblock line="25">
-          <description>up</description>
-          <long-description/>
-          <tag line="25" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="25" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="31">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="47" package="Migration">
-        <name>down</name>
-        <full_name>down</full_name>
-        <docblock line="41">
-          <description>down</description>
-          <long-description/>
-          <tag line="41" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="41" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="47">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="DA/Migration/Version20130517220207.php" hash="32f4c14f3dc70d58a90a52a96ace658c" package="Default">
-    <docblock line="3">
-      <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
-      <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.&lt;/p&gt;</long-description>
-      <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="DA\Migration" line="22" package="Migration">
-      <extends>\Doctrine\DBAL\Migrations\AbstractMigration</extends>
-      <name>Version20130517220207</name>
-      <full_name>\DA\Migration\Version20130517220207</full_name>
-      <docblock line="18">
-        <description>Criação da tabela de Presenca em Sessões</description>
-        <long-description/>
-        <tag line="18" name="package" description="Migration"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="30" package="Migration">
-        <name>up</name>
-        <full_name>up</full_name>
-        <docblock line="24">
-          <description>up</description>
-          <long-description/>
-          <tag line="24" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="24" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="30">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="48" package="Migration">
-        <name>down</name>
-        <full_name>down</full_name>
-        <docblock line="42">
-          <description>down</description>
-          <long-description/>
-          <tag line="42" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="42" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="48">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="DA/Migration/Version20130517222924.php" hash="bde5dda4810b42823458215feadfb005" package="Default">
-    <docblock line="3">
-      <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
-      <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.&lt;/p&gt;</long-description>
-      <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="DA\Migration" line="22" package="Migration">
-      <extends>\Doctrine\DBAL\Migrations\AbstractMigration</extends>
-      <name>Version20130517222924</name>
-      <full_name>\DA\Migration\Version20130517222924</full_name>
-      <docblock line="18">
-        <description>Inserção da Legislatura Atual</description>
-        <long-description/>
-        <tag line="18" name="package" description="Migration"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="30" package="Migration">
-        <name>up</name>
-        <full_name>up</full_name>
-        <docblock line="24">
-          <description>up</description>
-          <long-description/>
-          <tag line="24" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="24" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="30">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Migration" line="41" package="Migration">
-        <name>down</name>
-        <full_name>down</full_name>
-        <docblock line="35">
-          <description>down</description>
-          <long-description/>
-          <tag line="35" name="param" description="" type="\Doctrine\DBAL\Schema\Schema" variable="$schema">
-            <type by_reference="false">\Doctrine\DBAL\Schema\Schema</type>
-          </tag>
-          <tag line="35" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="41">
-          <name>$schema</name>
-          <default/>
-          <type>\Doctrine\DBAL\Schema\Schema</type>
-        </argument>
-      </method>
-    </class>
-  </file>
   <file path="DA/Scrapper/Scrapper.php" hash="8a1c51d77e75b5e5e05a7aadecc3ae7c" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
@@ -732,80 +452,80 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
       </method>
     </class>
   </file>
-  <file path="DA/Console/Application.php" hash="d7cc9fdca7639006521567403288ac23" package="Default">
+  <file path="DA/Console/Application.php" hash="626f89b1d60c9163e8896e171ef8f8ef" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="false" namespace="DA\Console" line="19" package="Console">
+    <class final="false" abstract="false" namespace="DA\Console" line="20" package="Console">
       <extends>\Symfony\Component\Console\Application</extends>
       <name>Application</name>
       <full_name>\DA\Console\Application</full_name>
       <docblock line="15">
-        <description>Uma Aplicação Console</description>
+        <description>Aplicação Console Container</description>
         <long-description/>
         <tag line="15" name="package" description="Console"/>
       </docblock>
-      <property final="false" static="false" visibility="private" line="25" namespace="DA\Console" package="Default">
+      <property final="false" static="false" visibility="private" line="26" namespace="DA\Console" package="Default">
         <name>$app</name>
         <default/>
-        <docblock line="21">
+        <docblock line="22">
           <description>Objeto da Aplicação</description>
           <long-description/>
-          <tag line="21" name="var" description="" type="\DA\Console\Silex\Application">
-            <type by_reference="false">\DA\Console\Silex\Application</type>
+          <tag line="22" name="var" description="" type="\Silex\Application">
+            <type by_reference="false">\Silex\Application</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="31" namespace="DA\Console" package="Default">
+      <property final="false" static="false" visibility="private" line="32" namespace="DA\Console" package="Default">
         <name>$db</name>
         <default/>
-        <docblock line="27">
+        <docblock line="28">
           <description>Instancia de conexão com o Banco</description>
           <long-description/>
-          <tag line="27" name="var" description="" type="\Doctrine\DBAL\Connection">
+          <tag line="28" name="var" description="" type="\Doctrine\DBAL\Connection">
             <type by_reference="false">\Doctrine\DBAL\Connection</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Console" line="37" package="Console">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Console" line="38" package="Console">
         <name>configureHelpers</name>
         <full_name>configureHelpers</full_name>
-        <docblock line="33">
+        <docblock line="34">
           <description>Configura os Helpers necessários</description>
           <long-description/>
-          <tag line="33" name="return" description="" type="void">
+          <tag line="34" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="DA\Console" line="51" package="Console">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="DA\Console" line="52" package="Console">
         <name>connect</name>
         <full_name>connect</full_name>
-        <docblock line="47">
+        <docblock line="48">
           <description>Conecta ao banco e salva na propriedade DB</description>
           <long-description/>
-          <tag line="47" name="return" description="" type="void">
+          <tag line="48" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Console" line="73" package="Console">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Console" line="74" package="Console">
         <name>setup</name>
         <full_name>setup</full_name>
-        <docblock line="67">
+        <docblock line="68">
           <description>Configura os Recursos necessários para Aplicação</description>
           <long-description/>
-          <tag line="67" name="param" description="" type="\Silex\Application" variable="$app">
+          <tag line="68" name="param" description="" type="\Silex\Application" variable="$app">
             <type by_reference="false">\Silex\Application</type>
           </tag>
-          <tag line="67" name="return" description="" type="void">
+          <tag line="68" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
-        <argument line="73">
+        <argument line="74">
           <name>$app</name>
           <default/>
           <type>\Silex\Application</type>
@@ -898,32 +618,31 @@ de atualização do Banco de Dados</description>
       </method>
     </class>
   </file>
-  <file path="DA/Repository/Presenca.php" hash="e4ba7801b4b12df06a17f379cef0f198" package="Default">
+  <file path="DA/Repository/Presenca.php" hash="5b20a51db1e70b9b64a4943c6a76d803" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="true" namespace="DA\Repository" line="24" package="Repository\Presenca">
+    <class final="false" abstract="true" namespace="DA\Repository" line="23" package="Repository\Presenca">
       <extends>\DA\Repository\Repository</extends>
       <name>Presenca</name>
       <full_name>\DA\Repository\Presenca</full_name>
       <docblock line="16">
-        <description>Classe Abstrata responsavel por servir de Base
-para o armazenamento das Presencas em Reuniões de Comissão
-e Sesões do Plenario</description>
+        <description>Classe Abstrata responsavel por servir de Base para o
+armazenamento das Presencas em Reuniões de Comissão e Sesões do Plenario</description>
         <long-description/>
         <tag line="16" name="package" description="Repository"/>
         <tag line="16" name="subpackage" description="Presenca"/>
       </docblock>
-      <property final="false" static="false" visibility="protected" line="30" namespace="DA\Repository" package="Default">
+      <property final="false" static="false" visibility="protected" line="29" namespace="DA\Repository" package="Default">
         <name>$dbTable</name>
         <default/>
-        <docblock line="26">
+        <docblock line="25">
           <description>Tabela onde serão salvas as presencas no Banco de Dados</description>
           <long-description/>
-          <tag line="26" name="var" description="" type="string">
+          <tag line="25" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
@@ -931,13 +650,13 @@ e Sesões do Plenario</description>
       <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="37" package="Repository\Presenca">
         <name>savePresencas</name>
         <full_name>savePresencas</full_name>
-        <docblock line="32">
+        <docblock line="31">
           <description>Armazena as Presencas na DB</description>
           <long-description/>
-          <tag line="32" name="param" description="array de presencas a serem armazenadas" type="array" variable="$presencas">
+          <tag line="31" name="param" description="array de presencas a serem armazenadas" type="array" variable="$presencas">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="32" name="return" description="[description]" type="array">
+          <tag line="31" name="return" description="[description]" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
@@ -949,14 +668,14 @@ e Sesões do Plenario</description>
       </method>
     </class>
   </file>
-  <file path="DA/Repository/Repository.php" hash="76cb5155b107c599692031f1ce1f921c" package="Default">
+  <file path="DA/Repository/Repository.php" hash="12ca1ee4b7db8671432bf6ed4192b296" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="false" namespace="DA\Repository" line="19" package="Repository">
+    <class final="false" abstract="false" namespace="DA\Repository" line="20" package="Repository">
       <extends/>
       <name>Repository</name>
       <full_name>\DA\Repository\Repository</full_name>
@@ -965,76 +684,76 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
         <long-description/>
         <tag line="15" name="package" description="Repository"/>
       </docblock>
-      <property final="false" static="false" visibility="private" line="26" namespace="DA\Repository" package="Default">
+      <property final="false" static="false" visibility="private" line="27" namespace="DA\Repository" package="Default">
         <name>$app</name>
         <default/>
-        <docblock line="22">
+        <docblock line="23">
           <description>Objeto da Aplicação</description>
           <long-description/>
-          <tag line="22" name="var" description="" type="\Silex\Application">
+          <tag line="23" name="var" description="" type="\Silex\Application">
             <type by_reference="false">\Silex\Application</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="32" namespace="DA\Repository" package="Default">
+      <property final="false" static="false" visibility="private" line="33" namespace="DA\Repository" package="Default">
         <name>$db</name>
         <default/>
-        <docblock line="28">
+        <docblock line="29">
           <description>Armazena a conexão com o banco</description>
           <long-description/>
-          <tag line="28" name="var" description="" type="\Doctrine\DBAL\Connection">
+          <tag line="29" name="var" description="" type="\Doctrine\DBAL\Connection">
             <type by_reference="false">\Doctrine\DBAL\Connection</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="38" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="39" package="Repository">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="34">
+        <docblock line="35">
           <description>Construtor Repository</description>
           <long-description/>
-          <tag line="34" name="param" description="" type="\Silex\Application" variable="$app">
+          <tag line="35" name="param" description="" type="\Silex\Application" variable="$app">
             <type by_reference="false">\Silex\Application</type>
           </tag>
         </docblock>
-        <argument line="38">
+        <argument line="39">
           <name>$app</name>
           <default/>
           <type>\Silex\Application</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="DA\Repository" line="48" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DA\Repository" line="49" package="Repository">
         <name>connect</name>
         <full_name>connect</full_name>
-        <docblock line="44">
+        <docblock line="45">
           <description>Inicializa a conexão com o Banco</description>
           <long-description/>
-          <tag line="44" name="return" description="" type="void">
+          <tag line="45" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="DA\Repository" line="68" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="DA\Repository" line="69" package="Repository">
         <name>getDb</name>
         <full_name>getDb</full_name>
-        <docblock line="64">
+        <docblock line="65">
           <description>Retorna a conexão</description>
           <long-description/>
-          <tag line="64" name="return" description="" type="\Doctrine\DBAL\Connection">
+          <tag line="65" name="return" description="" type="\Doctrine\DBAL\Connection">
             <type by_reference="false">\Doctrine\DBAL\Connection</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="DA/Repository/Legislatura.php" hash="0de35703dfb1eb4929d063bf99effd28" package="Default">
+  <file path="DA/Repository/Legislatura.php" hash="1996ac3809b95a92ce448503ee287973" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="false" namespace="DA\Repository" line="19" package="Repository">
+    <class final="false" abstract="false" namespace="DA\Repository" line="20" package="Repository">
       <extends>\DA\Repository\Repository</extends>
       <name>Legislatura</name>
       <full_name>\DA\Repository\Legislatura</full_name>
@@ -1043,46 +762,46 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
         <long-description/>
         <tag line="15" name="package" description="Repository"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="28" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="29" package="Repository">
         <name>atualizarLegislaturaAtual</name>
         <full_name>atualizarLegislaturaAtual</full_name>
-        <docblock line="22">
+        <docblock line="23">
           <description>Atualiza o numero da atual Legislatura</description>
           <long-description/>
-          <tag line="22" name="param" description="[description]" type="int" variable="$legislatura">
+          <tag line="23" name="param" description="[description]" type="int" variable="$legislatura">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="22" name="return" description="" type="bool">
+          <tag line="23" name="return" description="" type="bool">
             <type by_reference="false">bool</type>
           </tag>
         </docblock>
-        <argument line="28">
+        <argument line="29">
           <name>$legislatura</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="38" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="39" package="Repository">
         <name>getLegislaturaAtual</name>
         <full_name>getLegislaturaAtual</full_name>
-        <docblock line="34">
+        <docblock line="35">
           <description>Retorna a Legislatura atual</description>
           <long-description/>
-          <tag line="34" name="return" description="Dados da legislatura atual" type="array">
+          <tag line="35" name="return" description="Dados da legislatura atual" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="DA/Repository/Deputado.php" hash="ed1cb93ec1790f5a52355b9bbd7791eb" package="Default">
+  <file path="DA/Repository/Deputado.php" hash="f1a898ad1e97ab8c8e54e46aeea7e5e0" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="false" namespace="DA\Repository" line="19" package="Repository">
+    <class final="false" abstract="false" namespace="DA\Repository" line="20" package="Repository">
       <extends>\DA\Repository\Repository</extends>
       <name>Deputado</name>
       <full_name>\DA\Repository\Deputado</full_name>
@@ -1091,31 +810,31 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
         <long-description/>
         <tag line="15" name="package" description="Repository"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="26" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="27" package="Repository">
         <name>getDeputadosAtuais</name>
         <full_name>getDeputadosAtuais</full_name>
-        <docblock line="22">
+        <docblock line="23">
           <description>Retorna os Deputados Atuais</description>
           <long-description/>
-          <tag line="22" name="return" description="Array com todos Deputados  armazenados" type="array">
+          <tag line="23" name="return" description="Array com todos Deputados  armazenados" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="43" package="Repository">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Repository" line="44" package="Repository">
         <name>inserirNovosDeputados</name>
         <full_name>inserirNovosDeputados</full_name>
-        <docblock line="37">
+        <docblock line="38">
           <description>Insere os Deputados passados como Array</description>
           <long-description/>
-          <tag line="37" name="param" description="[description]" type="array" variable="$deputados">
+          <tag line="38" name="param" description="[description]" type="array" variable="$deputados">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="37" name="return" description="Array com os resultados da inserção" type="array">
+          <tag line="38" name="return" description="Array com os resultados da inserção" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
-        <argument line="43">
+        <argument line="44">
           <name>$deputados</name>
           <default/>
           <type>array</type>
@@ -1185,7 +904,7 @@ as Presencas das Sessões do Plenario</description>
       </property>
     </class>
   </file>
-  <file path="DA/Builder/Presenca.php" hash="8cd5bfc5689505040812d44a9ae5be1e" package="Default">
+  <file path="DA/Builder/Presenca.php" hash="db63a957404f1cae197b67184bc07fd7" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
@@ -1253,8 +972,8 @@ extração e atualização das Presencas</description>
         <docblock line="48">
           <description>Array com Parametros da URL</description>
           <long-description/>
-          <tag line="48" name="var" description="" type="string">
-            <type by_reference="false">string</type>
+          <tag line="48" name="var" description="" type="array">
+            <type by_reference="false">array</type>
           </tag>
         </docblock>
       </property>
@@ -1280,46 +999,46 @@ contendo o primeiro e ultimo dia deste mes.</description>
       </method>
     </class>
   </file>
-  <file path="DA/Builder/Builder.php" hash="a12d8fa77d0a1639683740785036a8a1" package="Default">
+  <file path="DA/Builder/Builder.php" hash="4b9ff6203208e1661c1ab133f1d6c784" package="Default">
     <docblock line="3">
       <description>Deputado Analytics (http://deputadoanalytics.com.br/)</description>
       <long-description>&lt;p&gt;For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.&lt;/p&gt;</long-description>
       <tag line="3" name="link" description="https://github.com/thackpa/deputadosAnalytics" link="https://github.com/thackpa/deputadosAnalytics"/>
     </docblock>
-    <class final="false" abstract="false" namespace="DA\Builder" line="21" package="Builder">
+    <class final="false" abstract="false" namespace="DA\Builder" line="20" package="Builder">
       <extends/>
       <name>Builder</name>
       <full_name>\DA\Builder\Builder</full_name>
       <docblock line="15">
         <description>Classe base para construção dos Builders</description>
-        <long-description></long-description>
+        <long-description/>
         <tag line="15" name="package" description="Builder"/>
       </docblock>
-      <property final="false" static="false" visibility="protected" line="28" namespace="DA\Builder" package="Default">
+      <property final="false" static="false" visibility="protected" line="27" namespace="DA\Builder" package="Default">
         <name>$app</name>
-        <default></default>
-        <docblock line="24">
+        <default/>
+        <docblock line="23">
           <description>Objeto da Aplicação</description>
-          <long-description></long-description>
-          <tag line="24" name="var" description="" type="\Silex\Application">
+          <long-description/>
+          <tag line="23" name="var" description="" type="\Silex\Application">
             <type by_reference="false">\Silex\Application</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Builder" line="34" package="Builder">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="DA\Builder" line="33" package="Builder">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="30">
+        <docblock line="29">
           <description>Construtor do Builder</description>
-          <long-description></long-description>
-          <tag line="30" name="param" description="" type="\Silex\Application" variable="$app">
+          <long-description/>
+          <tag line="29" name="param" description="" type="\Silex\Application" variable="$app">
             <type by_reference="false">\Silex\Application</type>
           </tag>
         </docblock>
-        <argument line="34">
+        <argument line="33">
           <name>$app</name>
-          <default></default>
+          <default/>
           <type>\Silex\Application</type>
         </argument>
       </method>
@@ -1690,7 +1409,6 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
   <package name="Default" full_name="Default">
     <package name="Util" full_name="Default\Util"/>
   </package>
-  <package name="Migration" full_name="Migration"/>
   <package name="Repository" full_name="Repository">
     <package name="Presenca" full_name="Repository\Presenca"/>
   </package>
@@ -1704,7 +1422,6 @@ file that was distributed with this source code.&lt;/p&gt;</long-description>
     <namespace name="Console" full_name="DA\Console">
       <namespace name="Command" full_name="DA\Console\Command"/>
     </namespace>
-    <namespace name="Migration" full_name="DA\Migration"/>
     <namespace name="Repository" full_name="DA\Repository">
       <namespace name="Presenca" full_name="DA\Repository\Presenca"/>
     </namespace>

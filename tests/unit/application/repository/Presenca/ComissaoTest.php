@@ -2,7 +2,6 @@
 
 namespace DA\Tests\Repository\Presenca;
 
-use DA\Repository\Presenca\Comissao, DA\Util\Registry;
 
 /**
  * @backupGlobals disabled
@@ -14,8 +13,8 @@ class ComissaoTest extends \Base\DB
     protected $app;
     
     protected function setUp() {
-        $this->app = Registry::get("app");
-        $this->repository = new Comissao($this->app);
+        $this->app = \DA\Util\Registry::get("app");
+        $this->repository = new \DA\Repository\Presenca\Comissao($this->app);
         parent::setUp();        
     }
     
@@ -30,19 +29,19 @@ class ComissaoTest extends \Base\DB
     {
         $presencas = array(
                         array(
-                            'deputadoId'    => 1,
+                            'deputado_id'    => 1,
                             'data'          => date('Y-m-d'),
                             'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
-                            'deputadoId'    => 2,
+                            'deputado_id'    => 2,
                             'data'          => date('Y-m-d'),
                             'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
-                            'deputadoId'    => 3,
+                            'deputado_id'    => 3,
                             'data'          => date('Y-m-d'),
                             'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'

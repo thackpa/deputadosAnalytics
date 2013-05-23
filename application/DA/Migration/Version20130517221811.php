@@ -15,10 +15,6 @@ namespace DA\Migration;
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
-/**
- * Criação da tabela de Legislatura
- * @package Migration
- */
 class Version20130517221811 extends AbstractMigration
 {
 

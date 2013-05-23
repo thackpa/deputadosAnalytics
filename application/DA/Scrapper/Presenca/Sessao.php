@@ -74,7 +74,7 @@ class Sessao extends Presenca
 
         $dataPresencas = array();
         $pres = array();
-        $pres['deputadoId'] = $deputadoId;
+        $pres['deputado_id'] = $deputadoId;
 
         foreach ($presencas as $node) {
             $tds = $node->getElementsByTagName('td');

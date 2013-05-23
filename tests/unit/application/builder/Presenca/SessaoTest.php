@@ -114,7 +114,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                 $presencas = array( 
                     "1" => array(
                         array(
-                            'deputadoId'    => 1,
+                            'deputado_id'    => 1,
                             'data'          => date('d/m/Y'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',
@@ -123,7 +123,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                     ),
                     "2" => array(
                         array(
-                            'deputadoId'    => 2,
+                            'deputado_id'    => 2,
                             'data'          => date('d/m/Y'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',
@@ -132,7 +132,7 @@ class SessaoTest extends \PHPUnit_Framework_TestCase
                     ),
                     "3" => array(
                         array(
-                            'deputadoId'    => 3,
+                            'deputado_id'    => 3,
                             'data'          => date('d/m/Y'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',

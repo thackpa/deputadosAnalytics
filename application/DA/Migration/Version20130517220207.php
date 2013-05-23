@@ -21,12 +21,7 @@ use Doctrine\DBAL\Schema\Schema;
  */
 class Version20130517220207 extends AbstractMigration
 {
-    /**
-     * up
-     * @param  Schema $schema
-     *
-     * @return void
-     */
+    
     public function up(Schema $schema)
     {
         $this->addSql('CREATE TABLE IF NOT EXISTS presencasessao (
@@ -38,13 +33,7 @@ class Version20130517220207 extends AbstractMigration
                             justificativa VARCHAR(255) NOT NULL
                         ) ENGINE = InnoDB' );
     }
-
-    /**
-     * down
-     *
-     * @param  Schema $schema
-     * @return void
-     */
+  
     public function down(Schema $schema)
     {
         $schema->dropTable('presencasessao');

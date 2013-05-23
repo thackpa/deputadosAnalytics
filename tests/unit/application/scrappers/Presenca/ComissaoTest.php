@@ -25,7 +25,7 @@ class PresencaComissaoTest extends \Base\Scrapper
         $data = $this->scrapper->getPresencas(54, $urlParams);
         
         $this->assertTrue(is_array($data[0]));
-        $this->assertTrue(is_numeric($data[0]['deputadoId']));
+        $this->assertTrue(is_numeric($data[0]['deputado_id']));
         $this->assertTrue(is_string($data[0]['data']));      
         $this->assertTrue(is_string($data[0]['tipo']));
         $this->assertTrue(is_string($data[0]['titulo']));
