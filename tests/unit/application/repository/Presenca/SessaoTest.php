@@ -1,13 +1,13 @@
 <?php
 
-namespace DA\Tests\Repository\Presenca;
+namespace Tests\Repository\Presenca;
 
 use DA\Repository\Presenca\Sessao, DA\Util\Registry;
 
 /**
  * @backupGlobals disabled
  */
-class SessaoTest extends \Base\DB
+class SessaoTest extends \Tests\Base\DB
 {
     
     private $repository;
@@ -30,21 +30,21 @@ class SessaoTest extends \Base\DB
     {
         $presencas = array(
                         array(
-                            'deputadoId'    => 1,
+                            'deputado_id'    => 1,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
-                            'deputadoId'    => 2,
+                            'deputado_id'    => 2,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',
                             'comportamento' => 'Ausência'
                         ),
                         array(
-                            'deputadoId'    => 3,
+                            'deputado_id'    => 3,
                             'data'          => date('Y-m-d'),
                             'justificativa' => 'Compromissos praianos',
                             'titulo'        => 'Ordinária 003/02',

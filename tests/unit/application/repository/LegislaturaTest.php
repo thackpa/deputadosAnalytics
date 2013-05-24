@@ -1,13 +1,13 @@
 <?php
 
-namespace DA\Tests\Repository;
+namespace Tests\Repository;
 
 use DA\Repository\Legislatura, DA\Util\Registry;
 
 /**
  * @backupGlobals disabled
  */
-class LegislaturaTest extends \Base\DB
+class LegislaturaTest extends \Tests\Base\DB
 {
     
     private $repository;
@@ -16,7 +16,7 @@ class LegislaturaTest extends \Base\DB
     protected function setUp() {
         $this->app = Registry::get("app");
         $this->repository = new Legislatura($this->app);
-        parent::setUp();        
+        parent::setUp();
     }
     
     protected function getDataSet()

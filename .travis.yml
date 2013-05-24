@@ -3,9 +3,12 @@ php:
   - 5.3
   - 5.4
 
-env:
-  APPLICATION_ENV=automatedtests
+env:  
 
+  global:
+    - secure: 2c4b01333a324c2f104ffa9954f2d277e85bb8fd    
+    - APPLICATION_ENV=automatedtests
+    
 script: phpunit --configuration=phpunit.xml --coverage-text
 
 before_script:

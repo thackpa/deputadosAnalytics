@@ -77,7 +77,7 @@ class Comissao extends Presenca
 
         $dataPresencas = array();
         $pres = array();
-        $pres['deputadoId'] = $deputadoId;
+        $pres['deputado_id'] = $deputadoId;
 
         foreach ($presencas as $node) {
 

@@ -18,6 +18,7 @@
   </parser>
   <files>
      <directory>application/</directory>    
+     <ignore>application/DA/Migration/*</ignore>    
     <ignore-hidden>on</ignore-hidden>
     <ignore-symlinks>on</ignore-symlinks>
   </files>

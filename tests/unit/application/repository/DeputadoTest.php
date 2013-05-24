@@ -1,14 +1,13 @@
 <?php
 
-namespace DA\Tests\Repository;
-use DA\Repository\Deputado, DA\Util\Registry;
-
-include_once(realpath(__DIR__.'/../../../base/DB.php'));
+namespace Tests\Repository;
+use DA\Repository\Deputado;
+use DA\Util\Registry;
 
 /**
  * @backupGlobals disabled
  */
-class DeputadoTest extends \Base\DB
+class DeputadoTest extends \Tests\Base\DB
 {
     
     private $repository;

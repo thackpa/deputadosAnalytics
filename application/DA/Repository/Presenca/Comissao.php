@@ -27,6 +27,6 @@ class Comissao extends Presenca
      * Tabela onde serão salvas as presencas no Banco de Dados
      * @var string
      */
-    protected $dbTable = 'presencacomissao';
+    protected $dbTable = 'presenca_comissao';
 
 }
