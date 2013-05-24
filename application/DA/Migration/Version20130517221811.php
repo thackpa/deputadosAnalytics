@@ -15,33 +15,26 @@ namespace DA\Migration;
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
+/**
+ * Criação da tabela legislatura
+ * @package Migration
+ */
 class Version20130517221811 extends AbstractMigration
 {
 
-    /**
-     * up
-     * @param  Schema $schema
-     *
-     * @return void
-     */
     public function up(Schema $schema)
     {
-        $this->addSql('CREATE TABLE IF NOT EXISTS legislatura (
-                        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-                        numero INT(5) NOT NULL ,
-                        atual INT(1) NOT NULL,
-                        data DATE NOT NULL
-                    ) ENGINE = InnoDB' );
+        $this->addSql('CREATE TABLE IF NOT EXISTS `legislatura` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `numero` int(5) NOT NULL,
+          `atual` int(1) NOT NULL,
+          `data` date NOT NULL,
+          PRIMARY KEY (`id`)
+          ) ENGINE=InnoDB  DEFAULT CHARSET=utf8' );
     }
 
-    /**
-     * down
-     *
-     * @param  Schema $schema
-     * @return void
-     */
     public function down(Schema $schema)
     {
-          $schema->dropTable('legislatura');
+            $schema->dropTable('legislatura');
     }
 }

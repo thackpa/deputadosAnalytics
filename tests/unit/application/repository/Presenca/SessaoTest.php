@@ -1,13 +1,13 @@
 <?php
 
-namespace DA\Tests\Repository\Presenca;
+namespace Tests\Repository\Presenca;
 
 use DA\Repository\Presenca\Sessao, DA\Util\Registry;
 
 /**
  * @backupGlobals disabled
  */
-class SessaoTest extends \Base\DB
+class SessaoTest extends \Tests\Base\DB
 {
     
     private $repository;

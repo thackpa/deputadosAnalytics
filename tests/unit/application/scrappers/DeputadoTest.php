@@ -1,13 +1,11 @@
 <?php
 
-namespace DA\Tests\Scrapper;
-
-include_once(__DIR__.'/../../../base/Scrapper.php');
+namespace Tests\Scrapper;
 
 /**
  * @backupGlobals disabled
  */
-class DeputadoTest extends \Base\Scrapper
+class DeputadoTest extends \Tests\Base\Scrapper
 {
     
     public function testGetMainInfo()

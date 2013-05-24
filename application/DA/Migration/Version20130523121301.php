@@ -12,15 +12,22 @@ use Doctrine\DBAL\Schema\Schema;
  */
 class Version20130523121301 extends AbstractMigration
 {
-    public function up(Schema $schema)
-    {
-      $this->addSql("RENAME TABLE `presencacomissao` TO  `presenca_comissao`");
-      $this->addSql("RENAME TABLE `presencasessao` TO  `presenca_sessao`");
-    }
 
-    public function down(Schema $schema)
-    {
-       $this->addSql("RENAME TABLE `presenca_comissao` TO  `presencacomissao`");
-       $this->addSql("RENAME TABLE `presenca_sessao` TO  `presencasessao`");  
-    }
+  public function up(Schema $schema)
+  {
+      $this->addSql("CREATE TABLE IF NOT EXISTS `cota_parlamentar` (
+        `id` int(11) NOT NULL AUTO_INCREMENT,
+        `identificacao` int(11) NOT NULL,
+        `deputado_id` int(11) NOT NULL,
+        PRIMARY KEY (`id`),
+        KEY `fk_cota_parlamentar_1` (`deputado_id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8");
+
+  }
+
+  public function down(Schema $schema)
+  {
+      $schema->dropTable('cota_parlamentar');    
+  }
+
 }

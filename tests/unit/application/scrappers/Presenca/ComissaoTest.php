@@ -1,10 +1,10 @@
 <?php
-namespace DA\Tests\Scrapper;
+namespace Tests\Scrapper;
 
 /**
  * @backupGlobals disabled
  */
-class PresencaComissaoTest extends \Base\Scrapper
+class PresencaComissaoTest extends \Tests\Base\Scrapper
 {
     
     public function testGetPresencas()

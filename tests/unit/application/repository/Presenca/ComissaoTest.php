@@ -1,12 +1,12 @@
 <?php
 
-namespace DA\Tests\Repository\Presenca;
+namespace Tests\Repository\Presenca;
 
 
 /**
  * @backupGlobals disabled
  */
-class ComissaoTest extends \Base\DB
+class ComissaoTest extends \Tests\Base\DB
 {
     
     private $repository;

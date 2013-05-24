@@ -1,6 +1,6 @@
 <?php
 
-namespace DA\Tests\Builder\Presenca;
+namespace Tests\Builder\Presenca;
 
 use DA\Util\Registry;
 

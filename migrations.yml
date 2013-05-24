@@ -1,4 +1,4 @@
-name: Deputado Analytics Migrations
+name: Deputados Analytics Migrations
 migrations_namespace: DA\Migration
 table_name: migrations
 migrations_directory: application/DA/Migration/

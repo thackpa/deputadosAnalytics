@@ -15,6 +15,10 @@ namespace DA\Migration;
 use Doctrine\DBAL\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
+/**
+ * Inserção da Legislatura atual
+ * @package Migration
+ */
 class Version20130517222924 extends AbstractMigration
 {
 
@@ -25,6 +29,6 @@ class Version20130517222924 extends AbstractMigration
 
     public function down(Schema $schema)
     {
-        $this->addSql("DELETE FROM legislatura WHERE numero=54");
+        $this->addSql("DELETE FROM legislatura WHERE numero=54 and data='2012-02-02'");
     }
 }

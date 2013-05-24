@@ -1,6 +1,6 @@
 <?php
 
-namespace DA\Tests\Builder;
+namespace Tests\Builder;
 
 use DA\Util\Registry;
 
